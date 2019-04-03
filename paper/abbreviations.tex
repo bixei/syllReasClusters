@@ -1,0 +1,310 @@
+
+% \theoremstyle{plain}
+% 
+% \newtheorem{definition}{Definition}[chapter]
+% 
+% \newtheorem{proposition}{Proposition}[chapter]
+% 
+% \newtheorem{corollary}[proposition]{Corollary}
+% 
+% \newtheorem{theorem}[proposition]{Theorem}
+% 
+% \newtheorem{lemma}[proposition]{Lemma}
+% 
+% \newtheorem{example}{Example}[section]
+
+\newcommand{\ud}{\mathsf{undef}}
+\newcommand{\defined}{\mathsf{def}}
+
+\newcommand{\Shrink}{\vspace{-1mm}}
+
+\newcommand{\gcolor}{\color{gray}}
+
+
+\usepackage{collcell}
+\makeatletter
+\newcolumntype{G}{>{\collectcell\@gobble}c<{\endcollectcell}@{}}
+\makeatother
+
+% \newcounter{theorem}
+% \newcounter{subprop}[theorem]
+% \renewcommand{\thesubprop}{\arabic{theorem}.\roman{subprop}}
+% \newcommand{\slab}[1]
+% {\noindent%
+% \refstepcounter{subprop}%
+% \label{#1}%
+% \makebox[2.3em][r]{\textnormal{(\roman{subprop})} \hspace{0.25em}}}
+
+
+
+\newcommand{\SvL}{\mathsf{SvL}}
+
+\newcommand{\MP}{\CalM_\CalP}
+
+\newcommand{\Svl}{\Phi}
+\newcommand{\Svlp}{\Phi_{\CalP}}
+
+\newcommand{\TP}{\mathsf{T}_\CalP}
+\newcommand{\Lfp}{\mathsf{lfp}\,}
+\newcommand{\CalAPTwo}{\CalA_{2,\CalP}}
+\newcommand{\CalETwo}{\CalE}
+\newcommand{\two}{two-valued~} 
+\newcommand{\TPmodels}{\models}
+\newcommand{\Lmtwo}{\mathsf{lm}_2}
+
+
+\newcommand{\CalAP}{\CalA_\CalP}
+\newcommand{\CalOP}{\CalO_\CalP}
+\newcommand{\CalA}{{\cal A}}
+\newcommand{\CalB}{{\cal B}}
+\newcommand{\CalC}{{\cal C}}
+\newcommand{\CalD}{{\cal D}}
+\newcommand{\CalE}{{\cal E}}
+\newcommand{\CalG}{{\cal G}}
+\newcommand{\CalH}{{\cal H}}
+\newcommand{\CalF}{{\cal F}}
+\newcommand{\CalI}{{\cal I}}
+\newcommand{\CalIC}{{\cal IC}}
+\newcommand{\CalK}{{\cal K}}
+\newcommand{\CalL}{{\cal L}}
+\newcommand{\CalM}{{\cal M}}
+\newcommand{\CalN}{{\cal N}}
+\newcommand{\Call}{\tt Call}
+\newcommand{\CalO}{{\cal O}}
+\newcommand{\CalP}{{\cal P}}
+\newcommand{\CalR}{{\cal R}}
+\newcommand{\CalS}{{\cal S}}
+\newcommand{\CalT}{{\cal T}}
+\newcommand{\CalU}{{\cal U}}
+\newcommand{\CalV}{{\cal V}}
+\newcommand{\CalW}{{\cal W}}
+\newcommand{\CalX}{{\cal X}}
+\newcommand{\CalZ}{{\cal Z}}
+
+
+\newcommand{\IC}{\textsf{IC}}
+
+\newcommand{\fly}{\mathit{fly}}
+\newcommand{\bird}{\mathit{bird}}
+\newcommand{\abnormal}{\mathit{abnormal}}
+\newcommand{\irregular}{\mathit{irregular}}
+\newcommand{\regular}{\mathit{regular}}
+\newcommand{\cycle}{\mathit{cycle}}
+\newcommand{\negodd}{\mathit{neg}\text{-}\mathit{odd}}
+\newcommand{\negcycle}{\mathit{neg}\text{-}\mathit{cycle}}
+\newcommand{\nA}{\mathsf{n}\_A}
+\newcommand{\modif}{\mathsf{mod}}
+\newcommand{\invmodif}{\mathsf{invmod}}
+
+
+\newcommand{\cxt}{\mathsf{ctxt}}
+\newcommand{\inspect}{\mathsf{inspect}} 
+\newcommand{\inspectneg}{\mathsf{inspect_{not}}} 
+\newcommand{\insp}{\mathsf{insp}}
+
+
+\newcommand{\pre}{\mathit{pre}}
+
+\newcommand{\add}{\mathit{add}}
+\newcommand{\addictive}{\mathit{addictive}}
+\newcommand{\nadd}{\mathit{addictive^\prime}}
+\newcommand{\inex}{\mathit{inex}}
+\newcommand{\inexpensive}{\mathit{inex}}
+\newcommand{\ninex}{\mathit{inex^\prime}}
+\newcommand{\cig}{\mathit{cig}}
+\newcommand{\cigarette}{\mathit{cig}}
+\newcommand{\ab}{\mathit{ab}}
+% \newcommand{\abnadd}{\mathit{ab}}
+% \newcommand{\abinex}{\mathit{ab}}
+\newcommand{\abnmil}{\mathit{ab}}
+\newcommand{\abnnut}{\mathit{ab}}
+\newcommand{\abnadd}{\mathit{ab_{\add^\prime}}}
+\newcommand{\abinex}{\mathit{ab_{\inex}}}
+
+
+\newcommand{\mil}{\mathit{mil}}
+\newcommand{\millionaire}{\mathit{mil}}
+\newcommand{\nmillionaire}{\millionaire^\prime}
+\newcommand{\rich}{\mathit{rich}}
+% \newcommand{\abnmil}{\mathit{ab_{\mil^\prime}}}
+\newcommand{\work}{\mathit{work}}
+\newcommand{\hardworker}{\mathit{hard\_worker}}
+
+\newcommand{\dog}{\mathit{dog}}
+\newcommand{\poldog}{\mathit{police\_dog}}
+\newcommand{\vicious}{\mathit{vicious}}
+\newcommand{\abdog}{\mathit{ab_{dog^\prime}}}
+\newcommand{\hight}{\mathit{highly\_trained}}
+
+
+% \usepackage{scalerel}
+
+\newcommand{\vit}{\mathit{vit}}
+
+\newcommand{\vitamin}{\mathit{vitamin}}
+\newcommand{\nutritional}{\mathit{nutritional}}
+\newcommand{\nnutritional}{\mathit{nutritional^\prime}}
+% \newcommand{\abnnut}{\mathit{ab_{nut^\prime}}}
+\newcommand{\abnut}{\mathit{ab_{nut}}}
+
+\newcommand{\abhigh}{\mathit{ab_{trained}}}
+\newcommand{\abrich}{\mathit{ab_{rich}}}
+
+\newcommand{\storm}{\mathit{storm}}
+\newcommand{\lightning}{\mathit{lightning}}
+\newcommand{\tempest}{\mathit{tempest}}
+\newcommand{\ffire}{\mathit{ffire}}
+\newcommand{\barbecue}{\mathit{barbecue}}
+\newcommand{\dry}{\mathit{dry\_leaves}}
+\newcommand{\drys}{\mathit{dry}}
+\newcommand{\rained}{\mathit{rained}}
+\newcommand{\smoke}{\mathit{smoke}}
+\newcommand{\fire}{\mathit{fire}}
+\newcommand{\ffighters}{\mathit{ffighters}}
+\newcommand{\sirens}{\mathit{sirens}}
+\newcommand{\sir}{\mathit{sir}}
+
+
+
+\newcommand{\Make}{\mathsf{make}} 
+
+\newcommand{\lights}{\mathit{light}}
+\newcommand{\fofi}{\mathit{forest\_fire}}
+
+
+\newcommand{\died}{\mathit{died}}
+\newcommand{\thi}{\mathit{died\_of\_thi}}
+\newcommand{\poisshort}{\mathit{pois}}
+\newcommand{\pois}{\mathit{died\_of\_pois}}
+\newcommand{\hole}{\mathit{hole}}
+\newcommand{\wat}{\mathit{water\_pois}}
+
+
+\newcommand{\ja}{\mathit{jb}}
+\newcommand{\born}{\mathit{born}}
+\newcommand{\traitor}{\mathit{trait}}
+\newcommand{\trait}{\mathit{trait}}
+\newcommand{\communist}{\mathit{com}}
+\newcommand{\com}{\mathit{com}}
+\newcommand{\uk}{\mathit{uk}}
+\newcommand{\russia}{\mathit{rus}}
+
+\newcommand{\AUXATOMS}{\mathsf{AUXATOMS}}
+
+\newcommand{\cons}{\mathsf{c}}
+\newcommand{\consO}{\cons_1}
+\newcommand{\consT}{\cons_2}
+\newcommand{\atoms}{\mathsf{atoms}}
+\newcommand{\Ab}{ab}
+\newcommand{\Body}{\mbox{\em Body}}
+
+\newcommand{\defname}[1]{\textit{#1}}
+\newcommand{\name}[1]{\textit{#1}}
+
+\newcommand{\pose}{e}
+\newcommand{\posl}{l}
+\newcommand{\nege}{\lnot e}
+\newcommand{\negl}{\lnot l}
+
+
+\newcommand{\Ground}{\mathsf{g}}
+
+\newcommand{\LSEM}{\textsf{\L}-semantics\xspace}
+\newcommand{\SSEM}{\textsf{S}-semantics\xspace}
+\newcommand{\SvLSEM}{\textsf{SvL}-semantics\xspace}
+\newcommand{\SSS}{$\mathsf{S_3}$\xspace}
+
+
+\newcommand{\WComp}{\mathsf{wc}\,}
+
+
+\newcommand{\SThree}{{\mbox{\tiny S}}}
+
+\newcommand{\WFM}{\mathsf{wfm}_{\SThree}\,}
+
+%% ch: \mathsf{l} sieht leider wie ein Strich oder I aus
+%% warum eigentlich nicht ohne mathsf, es ist ja keine konkrete
+%% funktion oder operator\
+% \renewcommand{\Level}{\mathsf{level}}
+\newcommand{\Level}{l}
+\newcommand{\LevelI}{l_I}
+
+
+\newcommand{\auxiliary}{\xspace{auxiliary}}
+
+\newcommand{\eqdef}{=}
+\newcommand{\revimp}{\leftarrow}
+\newcommand{\equi}{\leftrightarrow}
+
+\newcommand{\posbody}{\mathsf{pos}}
+\newcommand{\negbody}{\mathsf{neg}}
+
+% \newcommand{\ATOMS}{\mathcal{A}} % global set of all atoms
+\newcommand{\ATOMS}{\mathsf{ATOMS}} % global set of all atoms
+
+% \renewcommand{\top}{T}
+
+\newcommand{\test}{\boldmath{test}}
+\newcommand{\true}{\mathbf{\top}}
+\newcommand{\false}{\mathsf{\bot}}
+\newcommand{\udf}{\mathsf{U}}
+
+\newcommand{\Luka}{{\mbox{\tiny\L}}}
+
+\newcommand{\LeastMod}{\mathsf{lm}}
+\newcommand{\Lmwcl}{\LeastMod_{\Luka}\mathsf{wc}\,}
+\newcommand{\ModelsLMWC}{\models_{\Luka}^{\LeastMod\mathsf{wc}\,}}
+\newcommand{\ModelsWCS}{\models_{wcs}}
+\newcommand{\ModelsL}{\models_{\mbox{\tiny\L}}}
+
+\newcommand{\NATURAL}{\mathbb{N}}
+
+\newcommand{\modelss}{\models_s^{\LeastMod\mathsf{wc}\,}}
+\newcommand{\modelsc}{\models_c^{\LeastMod\mathsf{wc}\,}}
+
+\newcommand{\MA}{\textsf{A}}
+\newcommand{\MI}{\textsf{I}}
+\newcommand{\ME}{\textsf{E}}
+\newcommand{\MO}{\textsf{O}}
+\newcommand{\NVC}{\textsf{NVC}}
+
+\newcommand{\Def}{\mathsf{def}}
+
+\newcommand{\WC}{\mathit{wc}}
+
+\newcommand{\WCS}{\textsc{WCS}\xspace}
+
+\newcommand{\True}{\textit{true}\xspace}
+\newcommand{\False}{\textit{false}\xspace}
+
+
+\newcommand{\basicc}{\textsf{basic}}
+\newcommand{\contrac}{\textsf{contraposition}}
+\newcommand{\abdc}{\textsf{abduction}}
+\newcommand{\genc}{\textsf{generalization}}
+% \newcommand{\basiccell}{\textsf{basic}}
+
+
+\newcommand{\betweentinyandsmall}{\fontsize{6}{8}\selectfont}
+\newcommand{\Pie}{{\CalP_{\tiny\mbox{\MI\ME 2}}}}
+\newcommand{\Piecontra}{{\CalP^{\tiny \contra}_{\tiny\mbox{\MI\ME 2}}}}
+\newcommand{\Piegen}{{\CalP^{\tiny \negFail}_{\tiny\mbox{\MI\ME 2}}}}
+\newcommand{\conditionals}{{\small\textsf{conditional}}}
+\newcommand{\licenses}{{\small\textsf{license}}}
+\newcommand{\import}{{\small\textsf{import}}}
+\newcommand{\transformation}{{\small\textsf{transformation}}}
+\newcommand{\dnegation}{{\small\textsf{noDoubleNeg}}}
+\newcommand{\unknownGen}{{\small\textsf{unknownGen}}}
+\newcommand{\abduction}{{\small\textsf{searchAlt}}}
+\newcommand{\converse}{{\small\textsf{converse}}}
+\newcommand{\negFailure}{{\small\textsf{generalization}}}
+\newcommand{\contraposition}{{\small\textsf{contra}}}
+\newcommand{\contra}{{\small\textsf{contra}}}
+\newcommand{\negFail}{{\small\textsf{gen}}}
+\newcommand{\basic}{{\small\textsf{basic}}}
+
+
+\newcommand{\ex}{\textsf{ex}}
+\newcommand{\imp}{\textsf{}}
+\newcommand{\Answers}{\textsf{Answers}}
+\newcommand{\Answer}{\textsf{FinalAnswer}}
