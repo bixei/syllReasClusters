@@ -87,20 +87,25 @@ Emmanuelle-Anna Dietz Saldanha and Richard M{\"o}rbitz\thanks{The authors are me
 % Therefore, an effortless interaction between humans and technical devices
 % is of crucial interest for everyone. As it is not likely that humans will make the effort to understand their devices but instead they will place high demands on them, their devices should be able to adapt to the human needs in the best possible way. For instance, a system should be able to recognize small changes and additionally identify which environmental parameters are relevant for the current communication with its owner. This in turn should allow the device to adapt flexibly and independently to the environment it is currently situated in. In order to develop such a system, it is necessary to understand how humans think and to recognize their behavioral patterns. 
 
-Originally, one of the objectives of using logic in the field of AI and logic programming was to formalize human reasoning and commonsense reasoning~\cite{McCarthy59,McCarthy98}. However, it did not have the expected successes~(cf.~\cite{mcdermott:87}).
-Although several alternatives have been proposed, such as non-monotonic or many-valued logics, the emphasis had shifted away from their application to real case studies of human reasoning.
+Originally, one of the objectives of using (not necessarily classical) logic in the field of AI and logic programming was to formalize human reasoning and commonsense reasoning~\cite{McCarthy59,McCarthy98}. 
+However, the proposed approaches did not have the expected successes in this~(cf.~\cite{mcdermott:87}),
+as proposed approaches were mostly theoretical and did not apply to real case studies.
 On the other hand, cognitive scientists have extensively investigated human thinking and acquired a great expertise.
 However, this expertise was not consulted, i.e. there was no communication among the relevant fields. 
 
-Following~\cite{strube:1992}, we argue that a theory that aims at modeling episodes of human reasoning needs to be evaluable according to its cognitive adequacy and should be comparable and compared to other cognitive theories. 
+
+Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
-Formal methods can offer the required tools to implement elaborate cognitive theories. This in turn, can allow a new way of communication among the fields, by avoiding ambiguous understanding of the theories, showing their formal correspondences and finally providing an appropriate evaluation method with respect to their cognitive adequacy. In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~\cite{ragni:stolzenburg:2015} as a starting point:
+
+Yet, the cognitive adequacy of a theory can only be measured, if that theory is evaluable. In this context, that means, if the theory can uniformally account for episodes of human reasoning systematically, according to its underlying assumptions. Only then, the cognitve adequacy of that theory can be compared to others.
+
+Formal methods can offer the required tools to implement such cognitive theories. This in turn, can allow a new way of communication among the fields, by avoiding ambiguous understanding, showing their formal correspondences and finally providing an appropriate evaluation method with respect to their cognitive adequacy. In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~\cite{ragni:stolzenburg:2015} as a starting point:
 We aim for a theory in which (i) all processes are comprehensible, (ii) the suggested principles represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
 % Even though the main logical formalism of Classical Logic (CL) has successfully been applied to our scientific reasoning,
 % various experimental studies have shown that human reasoning systematically deviates 
 % from classical logical conclusions (cf.~\cite{wason:68,byrne:89}).
 
-The results of the meta-study on syllogistic reasoning in~\cite{khemlani:2012} show that humans do not only systematically deviate from the assertions in CL, but from any other proposed cognitive theory (such as the theories proposed in~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
+The results of the meta-study on syllogistic reasoning in~\cite{khemlani:2012} show that the answers given by humans does not only systematically differ from the valid conclusions under classical logic, but from any other proposed cognitive theory (such as the theories proposed in~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
 % The approach suggested in~\cite{stolzenburg:luederitz:2017}, is based on venn diagrams, where moods are understood as conditional probabilities, and implemented 
 % in constraint logic programming. Yet, another logic programming approach, the Weak Completion Semantics, is suggested in~\cite{cogsci:2017}.
 Syllogisms originate from Aristotle~\cite{aristotle} and
@@ -177,7 +182,7 @@ chosen by just random guesses~\cite{khemlani:2012}. }
 % i.e.\ 
 % The majority's conclusions exclude each other, as the test was made such that 
 The ones who answered \emph{No valid conclusion}
-were not the same ones who answered \emph{No chemists are artists} or \emph{Some artists are not chemists}, and vice versa.
+were not the same ones who answered \emph{No chemists are artists} or \emph{Some artists are not chemists}, and vice versa.\footnote{Note that usually in these experiments, participants were supposed to give only one answer}
 
 A major drawback of the suggested cognitive theories so far is that only the participants'
 aggregated data was considered: These theories did not account for differences
@@ -213,10 +218,11 @@ seems to be more adequate.
 
 \section{WCS Clustering} \label{sect:wcsclustering}
 
-\cite{declare:2017} puts forward the hypothesis that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are (not necessarily valid) assumptions made by humans while reasoning, 
+The authors in~\cite{declare:2017} put forward the hypothesis that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are (not necessarily valid) assumptions made by humans while reasoning, 
 whereas heuristic strategies describe the methods that are applied when
 conclusions are not derived by reasoning but instead based on structural patterns or {biases}.
-The approach suggested in~\cite{declare:2017} is based on a new computational logic approach for human syllogistic reasoning~\cite{cogsci:2017}, which seems to perform better than other state-of-the-art cognitive theories when evaluated with aggregated data from~\cite{khemlani:2012}. \cite{declare:2017} extended the approach in~\cite{cogsci:2017} by specifying three reasoning clusters and two heuristic strategies and achieved a match of 92\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
+The approach suggested in~\cite{declare:2017} is based on a new computational logic approach for human syllogistic reasoning~\cite{cogsci:2017}, which seems to perform better than other state-of-the-art cognitive theories when evaluated with aggregated data provided in~\cite{khemlani:2012}. 
+The approach presented in~\cite{declare:2017} extended~\cite{cogsci:2017} by specifying three reasoning clusters and two heuristic strategies and achieved a match of 92\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
 The system developed in~\cite{declare:2017}, was extended and participated at the Syllogism Challenge 2017.\footnote{\url{https://www.cc.uni-freiburg.de/modelingchallenge/challenge-2017}} Figure~\ref{overview:system:syllchal} illustrates the components of the system:
 First, groups of reasoners were specified based on cognitive principles and heuristic strategies.
 After that, 
@@ -301,8 +307,7 @@ are expressions of the forms $A  \leftarrow  L_1 \land \ldots \land L_m \land
 assumption will become $A \leftrightarrow \bot$ and, hence, $A$ has to be false.
 This can, however, be overwritten by other rules and facts (\textit{defeating} the assumption).} and $A \leftarrow \udf$ (called
 \textit{unknown assumptions}), where
-$A$ is an atom and the~$L_i$ with~$1 \leq i \leq m+p$ are
-literals.
+$A$ is an atom and the~$L_i$ with~$1 \leq i \leq m+p$ is a literal.
 $A$ is called \textit{head}
 and $L_1 \land \ldots \land L_m \land
 \cxt(L_{m+1}) \land \ldots \land \cxt(L_{m+p})$ as well as~$\top, \bot$
@@ -334,6 +339,7 @@ We consider the three-valued {\L}ukasiewicz logic~\cite{lukasiewicz:20}
 extended with the $\cxt$ connective, for which the
 corresponding truth values are $\top$, $\bot$ and $\udf$, meaning \textit{true}, \textit{false}
 and \textit{unknown}, respectively.
+% As it seems,  $\cxt$ corresponds to {\L}ukasiewicz necessity operator~\cite{}, where the difference is, that $\cxt$ is restricted to be applicable to literals only.
 A \defname{three-valued interpretation}~$I$ is a mapping from the set of
 logical formulas to the set
 of truth values~$\{ \true, \bot, \udf\}$, represented as a pair~$I~=~\langle I^\true,I^\bot \rangle$ of two disjoint sets of atoms:  $I^\true =  \{A \mid A \mbox{ is mapped to } \true \mbox{ under } I\}$ and $I^\bot = \{A \mid A \mbox{ is mapped to } \bot \mbox{ under } I \}$.
@@ -514,7 +520,7 @@ Furthermore, humans have a pragmatic understanding of quantifiers in the languag
 For instance, in natural language, we normally do not quantify over things that do not exist.
 Consequently, \textit{All $z$} implies \textit{Some $z$ exist}.
 This is known as the \textit{Gricean implicature} or the \textit{existential import} (\import). 
-It is assumed by several cognitive theories (cf.~\cite{johnsonlaird:1983,Rips1994}). 
+It also corresponds to the Aristotelian interpretation~\cite{parry:1991} and is assumed by several cognitive theories (cf.~\cite{johnsonlaird:1983,Rips1994}). 
  Likewise,~\cite{stenning:vanlambalgen:2008} have shown that humans
 require existential import for a conditional to be true.
 $\CalP_{Ayz}$, the logic program representing (\MA yz) is as follows:
@@ -709,17 +715,21 @@ $\CalP \models Iyz$ iff there exists an object $o_1$ such that $\CalP \ModelsWCS
 y(o_1) \wedge z(o_1)$ and there exists an
 object $o_2$ such that $\CalP \ModelsWCS y(o_2)$ and
 $\CalP \not\ModelsWCS z(o_2)$ and
-there exists an object $o_3$ such that $\CalP \ModelsWCS
-z(o_3) \wedge y(o_3)$ and there exists an
-object $o_4$ such that $\CalP \ModelsWCS z(o_4)$ and
-$\CalP \not\ModelsWCS y(o_4)$.
-\item[\MO yz (Some Are Not)]
+% there exists an object $o_3$ such that $\CalP \ModelsWCS
+% z(o_3) \wedge y(o_3)$ and 
+there exists an
+object $o_3$ such that $\CalP \ModelsWCS z(o_3)$ and
+$\CalP \not\ModelsWCS y(o_3)$.
+\item[\MO yz (some are not)]
 $\CalP \models Oyz$ iff there exists an object $o_1$ such that $\CalP \ModelsWCS
 y(o_1) \wedge \neg z(o_1)$ and there exists an
 object $o_2$ such that $\CalP \ModelsWCS y(o_2)$ and
 $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC] When no previous conclusion can be derived, no valid conclusion holds.
 \end{description}
+For \MI yz (some) the conversion is explicitly specified, motivated by it (\converse) principle.
+By requiring for \MI\ and \MO, the existence of an object with the first property,
+for which the second property has to be either either false or unknown, \MA\ and \MI, and, \ME\ and \MO, exclude each other, respectively.
 
 
 
@@ -847,7 +857,8 @@ i.e. the participants carried out the task twice, with a break of one week. The 
  all majority's conclusions were predicted by WCS clustering.
 \item[Non-aggregated evaluation] None of the clusters fitted any individual participants' response pattern, i.e.\ no participant did belong to a single cluster.
 \end{description}
-Given this sobering outcome of (2), we investigated whether patterns could be found on the level of the
+Given this sobering outcome of the non-aggregated evaluation, 
+we investigated whether patterns could be found on the level of the
 cognitive principles: \basic, \contraposition, \abduction\ and \negFailure.
 Table~\ref{tab:cogprinc} provides an overview of the predicted conclusions according to these principles.\footnote{Note that any advanced principle also includes the logic program clauses specified for \textsf{basic}.}
 The predictions of the principles naturally raises a few questions on the plausibility of 
@@ -890,7 +901,7 @@ We address these questions in the following section.
 
 \MA\MO1  &        &        &        &\abdc   &        &        &        &        & \basicc \\
 \MA\MO2  &        &        &        &        &        &        &        &\basicc \\  \rowcolor{lightgray} 	
-\MA\MO3  &        &        &        &        &        &        &\contrac&\basicc & \\
+\MA\MO3  &        &        &        &        &        &        &        &\contrac&\basicc \\
 \MA\MO4  &        &        &        &\basicc \\ %\midrule 
 
 \rowcolor{lightgray} 
@@ -1178,9 +1189,10 @@ This in turn might give us a new starting point to investigate whether the cogni
 % experiments, where possibly, participants are explicitly asked (not) to assume certain cognitive principles.
 % Another aspect that needs to be examined, is 
 
- 
+\section{Acknowledgments}
 
-
+Thanks to the reviewer for pointing us to the relationship of the $\cxt$ operator
+with {\L}ukasiewicz' extensional necessity operator.
 
 \bibliographystyle{splncs}
 \bibliography{bibv4}
