@@ -549,7 +549,7 @@ Similarly to the previous case, (\licenses) and (\import) apply here
 as well.
 The logic programs specified in Subsection~\ref{sect:wcs} 
 do not allow heads of clauses to be negative literals. Therefore, a negative conclusion~$\neg p(X)$ is represented
-by introducing an auxiliary formula $p'(X)$ together with the clause $p(X) \leftarrow \neg p'(X)$ and the integrity constraint $\udf \leftarrow p(X) \wedge p'(X)$ (\transformation). This is a widely used technique in Logic Programming. 
+by introducing an auxiliary formula $p'(X)$ together with the clause $p(X) \leftarrow \neg p'(X)$ and the integrity constraint $\udf \leftarrow p(X) \wedge p'(X)$ (\transformation). This is a widely used technique in Logic Programming (e.g. choice rules in~\cite{GebserKaminskiKaufmannSchaub12}). 
 Another principle that we introduce is the no double negation principle: Under the Weak Completion Semantics, a positive conclusion can be derived from double negation appearing in two conditionals. However, it seems that humans normally do not reason in such a way~\cite{khemlani:2012}. Hence, we block them with the help of abnormalities (\dnegation). $\CalP_{Eyz}$, the logic program representing (\ME yz) is as follows:
 % \footnote{For simplicity, we omitted to list the clauses that are introduced by the (\converse) principle in $\CalP_{Eyz}$: The same clauses just switching $y$ and $z$ are added and thus also the fact $z(o_2) \leftarrow \top$ for another object $o_2$.
 % The entire program can be found in~\cite{declare:2017}.}
@@ -1181,14 +1181,19 @@ with respect to these individual reasoning patterns. However, and this leads us 
 we could show that participants' answers seemed to be explainable through a set of cognitive principles. In particular,
 some principles seemed to exclude each other by the individual reasoners throughout the experiment (contraposition and abduction), whereas others often appeared together (basic/ contraposition and abduction/ generalization). 
 The individual participants' data allowed us to observe other reasoning patterns (high/ low frequency of NVC conclusions and high/ low frequency of changing answers between week 1 and week 2 answers). 
-Interestingly, there was one group of participants for which we could not identify any pattern (intermediate). 
-They seemed to compensate for their wrong/ right answers, and might have changed their strategies within the task.
-Another explanation might be that the set of cognitive principles presented in Section~\ref{sect:representing} is not complete yet.
+Interestingly, there was one group of participants for which we could not identify any pattern (intermediate)
+and might have changed their strategies within the task.
+Furthermore, it is quite likely that the set of cognitive principles presented in Section~\ref{sect:representing} is not complete.
 
 % Static clusters for each participant might not be appropriate, rather, a sequential application of cognitive principles seems to be more likely
 For the future, we need to investigate whether the sequential application of the cognitive principles 
 can give us more insights on the participants' reasoning pattern. In particular, our hypothesis is that these principles might correspond to some of the reasoning steps within the insight model~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}. Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested in~\cite{ragni:2017}.
 This in turn might give us a new starting point to investigate whether the cognitive principles  specified here can characterize participants' conclusions in other reasoning episodes.
+
+Another aspect that would be intersting to investigate is in how far the $\cxt$ operator within the extended three-valued {\L}ukasiewicz logic,
+originally presented in~\cite{}, 
+ corresponds to the {\L}ukasiewicz extensional necessity operator~\cite{}.\footnote{Thanks to the reviewer for this observation.}
+
 % episodes.
 % In order to validate the idea of a sequential reasoning procedure, cognitive scientists will have to set-up new 
 % experiments, where possibly, participants are explicitly asked (not) to assume certain cognitive principles.
