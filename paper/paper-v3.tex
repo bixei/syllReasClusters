@@ -89,7 +89,7 @@ Emmanuelle-Anna Dietz Saldanha and Richard M{\"o}rbitz\thanks{The authors are me
 
 Even though the main logical formalism of Classical Logic (CL) has successfully been applied to our scientific reasoning,
 various experimental studies have shown that human reasoning systematically deviates 
-from conclusions valid under CL (cf.~\cite{wason:68,byrne:89}).
+from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
 % Originally, one of the objectives in the field of AI and logic programming was to formalize human reasoning and commonsense reasoning~\cite{McCarthy59,McCarthy98}. 
 % However, the proposed approaches have been strongly critized~(cf.~\cite{mcdermott:87}).
 % On the other hand, cognitive scientists have extensively investigated and acquired a great expertise
@@ -97,10 +97,8 @@ from conclusions valid under CL (cf.~\cite{wason:68,byrne:89}).
 % % as they were mostly theoretical and did not apply to real case studies.
 % However, only recently an attempt was made 
 % this expertise was not consulted, i.e. there was no communication among the relevant fields. 
-
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
-
 In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~\cite{ragni:stolzenburg:2015} as a starting point:
 We aim for a theory in which (i) all processes are comprehensible, (ii) the suggested underlying represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
 
@@ -108,10 +106,9 @@ We aim for a theory in which (i) all processes are comprehensible, (ii) the sugg
 % Only then, the cognitve adequacy of that theory can be compared to others.
 % 
 % Formal methods can offer the required tools to implement such cognitive theories. This in turn, can allow a new way of communication among the fields, by avoiding ambiguous definitions, showing their formal correspondences and finally providing appropriate evaluation methods with respect to their cognitive adequacy. 
-
 % A major drawback of 
-The results of the meta-study on syllogistic reasoning in~\cite{khemlani:2012} show that the answers given by humans does not only systematically differ from the valid conclusions under classical logic, but from any other proposed cognitive theory (such as the theories proposed in~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
-Possibly one of the reasons could be that none of the suggested cognitive theories so far has accounted for differences among individuals, i.e.\ they only considered the data summed up with respect to the individual answer possibilities. 
+The results of the meta-study on syllogistic reasoning in~\cite{khemlani:2012} show that the answers given by humans doe not only systematically differ from the valid conclusions under CL, but from any other proposed cognitive theory (cf.~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
+% Possibly one of the reasons could be that none of the suggested cognitive theories so far has accounted for differences among individuals, i.e.\ they only considered the data summed up with respect to the individual answer possibilities. 
 % As recent investigations on psychological experiments show (cf.~\cite{khemlani:2016, ragni:2017}), it seems that different humans represent and reason about conditional information differently.
 % This implies that \textit{the} human reasoner does not exist, instead there 
 % seem to exist various (human) reasoning clusters.
@@ -152,7 +149,7 @@ formalization\label{table:moods}.}
 %  	\small
 	\begin{center}
 	\[
-		\begin{array}{@{\hspace{0cm}}r@{\hspace{0.1cm}}c@{\hspace{0.1cm}}c@{\hspace{0.1cm}}c@{\hspace{0.1cm}}c}
+		\begin{array}{@{\hspace{0cm}}c@{\hspace{0.2cm}}c@{\hspace{0.1cm}}c@{\hspace{0.1cm}}c@{\hspace{0.1cm}}c}
 		\toprule
 		 \mbox{Figure} & \mbox{Premise 1} & \mbox{Premise 2} \\
 		\midrule
@@ -347,7 +344,6 @@ Consider the following transformation for a given $\CalP$:
   \ldots \vee \Body_m$. 2.\ Replace all occurrences of $\leftarrow$ by $\leftrightarrow$.
 The obtained ground set of equivalences is called the \textit{weak completion}
 of~$\CalP$ or~$\WC\CalP$.
-
 % $\neg A$ is \textit{assumed in $\Ground \CalP$} iff $\Ground \CalP$
 % contains a negative assumption with head $A$, $\Ground \CalP$ does not
 % contain an unknown assumption with head $A$, and $\Def(A,\CalP) = \emptyset$.
@@ -578,7 +574,7 @@ z'(X)$. We obtain
 \]
 
 
-\subsubsection{Converse Implication (\converse) and Unknown Generalization (\unknownGen)}
+\subsubsection{Converse Implication (\converse) and \\ Unknown Generalization (\unknownGen)}
 Consider the statement \textit{Some y are z.} ({\MI yz}), which in CL, is represented as $\exists X (y(X) \wedge z(X))$
 and which is semantically equivalent to $\exists X(z(X) \wedge y(X))$ (\converse).
 As~\cite{khemlani:2012}
@@ -741,9 +737,9 @@ object $o_2$ such that $\CalP \ModelsWCS y(o_2)$ and
 $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC (no valid conclusion)] iff previous conclusion can be derived.
 \end{description}
-For \MI yz (some) the conversion is explicitly specified, motivated by it (\converse) principle.
+For \MI yz (some) the conversion is explicitly specified, motivated by the (\converse) principle.
 By requiring for \MI yz and \MO yz, the existence of an object with the first property,
-for which the second property has to be either either false or unknown, \MA yz and \MI yz, and, \ME yz and \MO yz, exclude each other, respectively.
+for which the second property has to be either either false or unknown, \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
 
 \section{Evaluation} \label{sect:aggregateddata}
 
@@ -798,9 +794,7 @@ a(X) & \leftarrow b(X) \wedge \neg \Ab_{ba}(X). & \tag{\conditionals\ \&\ \licen
 \Ab_{ba}(o_1) & \leftarrow  \bot. & \tag{\licenses\ \& \unknownGen}\\
 b(o_1) & \leftarrow  \top. & \tag{\import} \\
 b(o_2) & \leftarrow  \top. & \tag{\unknownGen}
-% \medskip \\
-\end{align}
-\begin{align}
+\medskip \\
 b(X) & \leftarrow a(X) \wedge \neg \Ab_{ab}(X). & \tag{\conditionals\ \&\ \licenses\ \&\ \converse}\\
 \Ab_{ab}(o_3) & \leftarrow  \bot. & \tag{\unknownGen\ \& \ \licenses\ \&\ \converse}\\
 a(o_3) & \leftarrow  \top. & \tag{\import\ \&\ \converse} \\
@@ -875,6 +869,22 @@ The results are two-fold:
  all majority's conclusions were predicted.
 \item[Non-aggregated evaluation] None of the clusters fitted any individual participants' response pattern, i.e.\ none of the participants belonged to a certain cluster.
 \end{description}
+
+
+
+Given this sobering outcome with respect to the non-aggregated evaluation, 
+we investigated whether patterns could be found on the level of the
+cognitive principles: \basic, \contraposition, \abduction\ and \negFailure.
+Table~\ref{tab:cogprinc} provides an overview of the predicted conclusions according to these principles.\footnote{Note that any advanced principle also includes the logic program clauses specified for \textsf{basic}.}
+The predictions of the principles naturally raises a few questions on the plausibility of 
+the underlying assumptions:
+(i) Do participants use the same reasoning strategy throughout the same reasoning task, i.e.\ 
+can their conclusions be 
+explained by  the same principles throughout the whole reasoning task, or do they switch strategies within one reasoning task?
+(ii) Is the list of principles in Section~\ref{sect:representing} complete, i.e.\ can the conclusions of all reasoners be covered
+ by these principles? and
+(iii) Do participants learn, i.e.\ do they improve their logical ability by doing the same reasoning task again.
+We address these questions in the following.
 
 \clearpage
 \begin{table}[t]\betweentinyandsmall\centering
@@ -979,22 +989,6 @@ The results are two-fold:
  
 \thispagestyle{empty}
 \clearpage
-
-
-Given this sobering outcome with respect to the non-aggregated evaluation, 
-we investigated whether patterns could be found on the level of the
-cognitive principles: \basic, \contraposition, \abduction\ and \negFailure.
-Table~\ref{tab:cogprinc} provides an overview of the predicted conclusions according to these principles.\footnote{Note that any advanced principle also includes the logic program clauses specified for \textsf{basic}.}
-The predictions of the principles naturally raises a few questions on the plausibility of 
-the underlying assumptions:
-(i) Do participants use the same reasoning strategy throughout the same reasoning task, i.e.\ 
-can their conclusions be 
-explained by  the same principles throughout the whole reasoning task, or do they switch strategies within one reasoning task?
-(ii) Is the list of principles in Section~\ref{sect:representing} complete, i.e.\ can the conclusions of all reasoners be covered
- by these principles? and
-(iii) Do participants learn, i.e.\ do they improve their logical ability by doing the same reasoning task again.
-We address these questions in the following.
-
 \subsection{On non-aggregated Data} \label{sect:nonag}
 
 A wide amount of cognitive theories for syllogistic reasoning have previously only be evaluated with respect to the aggregated data of psychological experiments.
@@ -1200,7 +1194,7 @@ For the future, we need to investigate whether the sequential application of the
 can give us more insights on the participants' reasoning pattern. In particular, our hypothesis is that these principles might correspond to some of the reasoning steps within the insight model~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}. Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested in~\cite{ragni:2017}.
 This in turn might give us a new starting point to investigate whether the cognitive principles  specified here can characterize participants' conclusions in other reasoning episodes.
 
-Another aspect that would be intersting to investigate is in how far the semantics of the $\cxt$ operator within the extended three-valued {\L}ukasiewicz logic in Section~\ref{sub:3valuedL}, 
+Another interesting aspect is to investigate in how far the semantics of the $\cxt$ operator within the extended three-valued {\L}ukasiewicz logic in Section~\ref{sub:3valuedL}, 
  corresponds to the {\L}ukasiewicz extensional necessity operator~\cite{}.\footnote{Thanks to the
  anonymous reviewer for this observation.}
 
