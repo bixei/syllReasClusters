@@ -124,8 +124,7 @@ they are complex enough to require actual reasoning.
 A syllogism consists of two
 premises and one conclusion,
 each of which is a statement about properties over terms which can have one of the classical quantifiess in Table~\ref{table:moods} (called \emph{moods}). The pair of syllogistic premises can have four different orders as shown in Table~\ref{t:2} (called \emph{figures}). Based on these moods and figures, 64 different pairs of syllogistic premises can be constructed.
-A conclusion then consists of an assertion about two properties over terms where each of these properties occurs in only one of the premises, together with a third middle property that does not appear in the conclusion but appears in both premises. 
-\todo[inline]{R: Für mich ist der letzte Satz unverständlich. Vorschlag: ``\dots each of these properties occurs in exactly one of the premises, and there is a third property connecting both premises which does not occur in the conclusion.''}\noindent%
+A conclusion then consists of an assertion about two properties over terms where each of these properties occurs in exactly one of the premises, and there is a third property connecting both premises which does not occur in the conclusion
 \begin{table}[t]
     \begin{minipage}{0.6\textwidth}
         \centering
@@ -173,7 +172,7 @@ For instance, consider the following pair of syllogistic premises:
 \end{align}
 Given these
 two premises, which conclusion on the relation between \emph{artists} and \emph{chemists} necessarily follows?
-According to~\cite{khemlani:2012}, the majority of participants in experimental studies
+According to the authors in~\cite{khemlani:2012}, the majority of participants in experimental studies
 concluded \emph{No chemists are artists} (29\;\%) and \emph{No valid conclusion} (27\;\%).
 The valid conclusion under CL, \emph{Some artists are not chemists},
 was concluded by only 16\,\%, which is exactly the threshold that the answer had not been chosen randomly~\cite{khemlani:2012}.
@@ -226,23 +225,23 @@ for the development of an adequate cognitive theory. Only recently approaches ha
 % We formulate the hypothesis that the individual clusters do not represent different human reasoners, but different stages of reasoning. Depending on the persistence and the
 % previous training of the individual participant, ...
 
-Here, we focus on a qualitative assessment of the clustering approach in~\cite{declare:2017},
-in the sense that we investigate the individual participants' conclusions with respect to the non-aggregated dataset provided by~\cite{khemlani:2016}.
-In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach and the formal representation of cognitive principles within this approach. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach in~\cite{declare:2017} on non-aggregated data.
+Here, we focus on a qualitative assessment of the clustering approach proposed in~\cite{declare:2017},
+in the sense that we investigate the individual participants' conclusions with respect to the non-aggregated dataset provided by the authors in~\cite{khemlani:2016}.
+In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach and the formal representation of cognitive principles within this approach. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach presented in~\cite{declare:2017} on non-aggregated data.
 Section~\ref{sect:nonag} provides a more adequate characterization of the individuals' reasoning patterns.
 
 \section{Clustering by Principles under WCS} \label{sect:wcsclustering}
 
-According to~\cite{declare:2017}, reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
+Clustering by Principles under WCS first presented in~\cite{declare:2017},
+assumes that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
 whereas heuristic strategies describe the methods that are applied when
 conclusions are not derived by reasoning but instead based on structural patterns or {biases}.
-The approach suggested in~\cite{declare:2017} is based on a new computational logic approach for human syllogistic reasoning~\cite{cogsci:2017}, which seems to perform better than other state-of-the-art cognitive theories when evaluated with aggregated data provided in~\cite{khemlani:2012}. 
-The approach presented in~\cite{declare:2017} extended~\cite{cogsci:2017} by specifying three reasoning clusters and two heuristic strategies and achieved a match of 92\;\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
+This approach is an extension of the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
 % The system developed in~\cite{declare:2017}, was extended and participated at the Syllogism Challenge 2017.\footnote{\url{https://www.cc.uni-freiburg.de/modelingchallenge/challenge-2017}} 
 Figure~\ref{overview:system:syllchal} illustrates the components of the system:
 First, groups of reasoners were specified based on a set of underlying cognitive principles and heuristic strategies.
 After that, this set was translated into a logic program (Section~\ref{sect:basic}-\ref{sect:advanced}), representing the group of reasoners.
-Next, the desired\todo{R: desired? Entailed, oder was willst du sagen?} models were computed (Section~\ref{sect:wcs}-\ref{sect:lfp}).
+Next, the respective models were computed (Section~\ref{sect:wcs}-\ref{sect:lfp}).
 After that, the entailed relations between $a$ and $c$ were extracted (Section~\ref{sect:entail}). 
  The final answer distribution was specified according to the number of reasoning clusters 
 that entailed the conclusion.
@@ -355,7 +354,6 @@ We omit the word \textit{contextual} when we refer to programs, if not stated ot
 
 \subsection{Three-Valued {\L}ukasiewicz Logic Extended with $\cxt$} \label{sub:3valuedL}
 
-\todo[inline]{R: Ist es eine Überlegung wert, \L ukasiewicz logic vor contextual programs einzuführen? Oben benutzen wir schon $\udf$, was erst hier eingeführt wird.}
 We consider the three-valued {\L}ukasiewicz logic~\cite{lukasiewicz:20}
 extended with the $\cxt$ connective, for which the
 corresponding truth values are $\top$, $\bot$ and $\udf$, meaning \textit{true}, \textit{false}
@@ -431,7 +429,7 @@ and \textit{unknown}, respectively.\label{tab:3vldluka}}
 
 A set of \textit{integrity constraints} $\CalIC$ consists of clauses of
 the form $\udf \leftarrow \Body$, where $\Body$ is a conjunction of
-literals\todo{R: ``and $\udf$ denotes unknown'' entfernt, sollte an dieser Stelle klar sein}. An interpretation maps
+literals. An interpretation maps
 an integrity constraint to $\top$ iff $\Body$ is either mapped to
 $\udf$ or $\bot$.  
 Given an interpretation~$I$
@@ -463,10 +461,11 @@ to the well-founded semantics has been shown in~\cite{dietz:hoelldobler:wernhard
 The weak completion of contextual
 programs might have more than one minimal model, and it is not guaranteed that 
 the least fixed point of $\Svlp$ always exists. However,
-if these programs do not contain cycles, then there always exists a supported model\todo{R: Begriff ``supported model'' unklar}, which 
-corresponds to the least fixed point of~$\Svlp$~\cite{dietz:hoelldobler:pereira:2017,dietz:hoelldobler:philipp:2017}.
-Let us denote the least fixed point of $\Svlp$ as $\CalM_\CalP$:
-As the fixed point of $\Svlp$ is unique and only computes the supported minimal model of $\WComp\CalP$, we define
+for programs without cycles, there always exists a unique supported model,
+which corresponds to the least fixed point of~$\Svlp$~\cite{dietz:hoelldobler:pereira:2017,dietz:hoelldobler:philipp:2017}. This model is \textit{supported} in the sense that 
+it will always be computed by $\Svlp$, independent with which interpretation, we start to iterate $\Svlp$ with. Let us denote this model as $\CalM_\CalP$:
+% As the fixed point of $\Svlp$ is unique and only computes the supported minimal model of $\WComp\CalP$, 
+% we define 
 $\CalP \ModelsWCS F$ iff $\CalM_\CalP(F) = \top$.
 For all programs considered in the sequel, $\CalM_\CalP$ exists.
 
@@ -506,7 +505,7 @@ For all programs considered in the sequel, $\CalM_\CalP$ exists.
 
 Eight principles for quantified statements have been developed in~\cite{cogsci:2017,costa:dietz:Hoelldobler:2017,declare:2017}.
 In the following, the programs are
-specified using the predicates $y$ and $z$, where~$yz$ can be replaced by $ab$, $ba$, $cb$, or $bc$ and depend on the figures shown in Table~\ref{t:2}. First, we introduce the basic principles that are assumed for all premises when applicable. Thus, we assume them to be assumed\todo{R: assumed $\to$ applied?} by all (human) reasoners. 
+specified using the predicates $y$ and $z$, where~$yz$ can be replaced by $ab$, $ba$, $cb$, or $bc$ and depend on the figures shown in Table~\ref{t:2}. First, we introduce the basic principles that are assumed for all premises when applicable.
 In Section~\ref{sect:advanced}, we present the advanced principles, which will 
 later be used to distinguish between the clusters of reasoners.
 % We indicate the cognitive principles in the text by specifying them in brackets.
@@ -517,8 +516,7 @@ A complete specification of the logic programs with respect to the moods accordi
 \subsubsection{Conditional Representation (\conditionals) and License for Inference (\licenses)}\label{sect:condli}
 Consider \textit{All y are z} ({\MA yz}), which in CL, is represented as $\forall X (y(X) \rightarrow z(X))$.
 Similarly, we assume that humans also understand this statement as a conditional sentence (\conditionals).
-However, it seems that humans understand them defeasibly, \todo{R: i.e.?} they assume a \textit{license for the inference}~\cite{stenning:vanlambalgen:2008},
-i.e.\ they might allow exceptions to the conditional (\licenses). For (\MA yz) this can be 
+However, it seems that humans understand them defeasibly, i.e., they assume a \textit{license for the inference}~\cite{stenning:vanlambalgen:2008} and might allow exceptions to the conditional (\licenses). For (\MA yz) this can be 
 explicitly expressed by 
 \textit{all $y$ that are not abnormal are $z$}.
 % \\
@@ -636,7 +634,7 @@ equivalent to its contrapositive, $\forall (X) (\neg b(X) \rightarrow \neg a(X))
 % contraposition also holds for the syllogistic moods~\MA\ and~\ME. 
 There is
 evidence that some of the participants might directly or indirectly 
-apply the contrapositive (\contraposition) within a reasoning task (cf.~\cite{rips:1994,mentallogic:1994})\todo{R: Die Referenzen gibt es bei mir nicht}.
+apply the contrapositive (\contraposition) within a reasoning task (cf.~\cite{rips:1994,mentallogic:1994}).
 Consider again $\CalP_{Ayz}$, the logic program representing (\MA yz)
 from Section~\ref{sect:basic}. The clauses that represent the contraposition principles are as follows:
 \begin{align}
@@ -743,9 +741,8 @@ $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC\ (no valid conclusion)] iff none of the previous conclusions can be derived.
 \end{description}
 For \MI yz (some) the conversion is explicitly specified, motivated by the (\converse) principle.
-By requiring for \MI yz and \MO yz the existence of an object $o_1$ with the first property $y$,
-for which the second property $z$ has to be either either false or unknown,
-\todo[inline]{R: Das ist doch nicht richtig, oder? Bei \MI yz muss $z(o_2)$ entweder false oder unknown sein, wie beschrieben, aber bei \MO yz muss es entweder true oder unknown sein.}
+By requiring for \MI yz (\MO yz, resp) the existence of an object with the first property $y$,
+for which the second property $z$ has to be either either false or unknown (true or unknown, resp.),
 \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
 
 \section{Evaluation} \label{sect:aggregateddata}
@@ -880,9 +877,7 @@ The results are two-fold:
 
 
 Given this sobering outcome with respect to the non-aggregated evaluation, 
-we investigated whether patterns could be found on the level of the
-cognitive principles: \basic, \contraposition, \abduction\ and \negFailure.
-\todo[inline]{R: Ich finde, hier wird nicht ganz klar, was das ``level of cognitive principles'' ist}
+we ignored the clusters, and investigated whether parallels between the applied cognitive principles could be observed: \basic, \contraposition, \abduction\ and \negFailure.
 Table~\ref{tab:cogprinc} provides an overview of the predicted conclusions according to these principles.\footnote{Note that any advanced principle also includes the logic program clauses specified for \textsf{basic}.}
 The predictions of the principles naturally raises a few questions on the plausibility of 
 the underlying assumptions:
@@ -1018,13 +1013,13 @@ Reasoning depends on the construction and manipulation of mental models, based o
  The procedure of mReasoner consists of two steps:
 (1) The construction of a small set of models that represents the terms of the premises, and
 (2) the call of a deliberative component to search for counterexamples to conclusions.
-They\todo{R: statt ``they'' \cite{khemlani:2016}} specified four parameters for the construction of a mental model and evaluated their
+They specified four parameters for the construction of a mental model and evaluated their
 predictions based on 2 datasets, week 1 and week 2, for 20 participants.
 The parameters for the construction of the mental models are (i) the 
-size of a mental model, (ii) the probability of drawing\todo{R: was heißt draw hier?} the complete set, 
+size of a mental model, (ii) the probability of drawing a conclusions only from the most common mental models, or from the complete set,
 (iii) the probability to search for counter examples,
 and (iv) the probability to weaken the conclusion.
-The clustering with mReasoner was based on partitioning around\todo{R: around \emph{the} medoids?} medoids clustering algorithm to determine the optimal number of clusters.
+The clustering with mReasoner was based on a particular clustering algorithm to determine the optimal number of clusters for their dataset.
 The K-means clustering algorithm was used to divide participants into clusters and then
 the mReaoner to simulated the clusters by choosing appropriate parameter settings.
 \cite{khemlani:2016} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
