@@ -124,7 +124,7 @@ they are complex enough to require actual reasoning.
 A syllogism consists of two
 premises and one conclusion,
 each of which is a statement about properties over terms which can have one of the classical quantifiess in Table~\ref{table:moods} (called \emph{moods}). The pair of syllogistic premises can have four different orders as shown in Table~\ref{t:2} (called \emph{figures}). Based on these moods and figures, 64 different pairs of syllogistic premises can be constructed.
-A conclusion then consists of an assertion about two properties over terms where each of these properties occurs in exactly one of the premises, and there is a third property connecting both premises which does not occur in the conclusion
+A conclusion then consists of an assertion about two properties over terms where each of these properties occurs in exactly one of the premises, and there is a third property connecting both premises which does not occur in the conclusion.
 \begin{table}[t]
     \begin{minipage}{0.6\textwidth}
         \centering
@@ -232,8 +232,8 @@ Section~\ref{sect:nonag} provides a more adequate characterization of the indivi
 
 \section{Clustering by Principles under WCS} \label{sect:wcsclustering}
 
-Clustering by Principles under WCS first presented in~\cite{declare:2017},
-assumes that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
+Clustering by principles under WCS was first presented in~\cite{declare:2017};
+the authors conjectured that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
 whereas heuristic strategies describe the methods that are applied when
 conclusions are not derived by reasoning but instead based on structural patterns or {biases}.
 This approach is an extension of the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
@@ -455,7 +455,7 @@ I^\top,I^\bot \rangle \mbox{ for all }  A \leftarrow \Body \in \Def(A,\CalP)\}.
 \]
 The weak completion of non-contextual programs\footnote{Non-contextual programs refer programs that do not contain rules in which $\cxt$ appears in the body of any rule, i.e.\ $p = 0$.} 
 always has a least model under  {\L}ukasiewicz logic,
-which can be computed by the least fixed point of~$\Svlp$\cite{hk:2009a}. The correspondence to other well-known logic programming approaches, in particular 
+which can be computed by the least fixed point of~$\Svlp$~\cite{hk:2009a}. The correspondence to other well-known logic programming approaches, in particular 
 to the well-founded semantics has been shown in~\cite{dietz:hoelldobler:wernhard:2014}.
  
 The weak completion of contextual
@@ -463,7 +463,7 @@ programs might have more than one minimal model, and it is not guaranteed that
 the least fixed point of $\Svlp$ always exists. However,
 for programs without cycles, there always exists a unique supported model,
 which corresponds to the least fixed point of~$\Svlp$~\cite{dietz:hoelldobler:pereira:2017,dietz:hoelldobler:philipp:2017}. This model is \textit{supported} in the sense that 
-it will always be computed by $\Svlp$, independent with which interpretation, we start to iterate $\Svlp$ with. Let us denote this model as $\CalM_\CalP$:
+it will always be computed by $\Svlp$, independent from the interpretation we start to iterate $\Svlp$ with. Let us denote this model as $\CalM_\CalP$:
 % As the fixed point of $\Svlp$ is unique and only computes the supported minimal model of $\WComp\CalP$, 
 % we define 
 $\CalP \ModelsWCS F$ iff $\CalM_\CalP(F) = \top$.
@@ -580,8 +580,7 @@ z'(X)$. We obtain
 \subsubsection{Converse Implication (\converse) and \\ Unknown Generalization (\unknownGen)}
 Consider the statement \textit{Some y are z.} ({\MI yz}), which in CL, is represented as $\exists X (y(X) \wedge z(X))$
 and which is semantically equivalent to $\exists X(z(X) \wedge y(X))$ (\converse).
-As~\cite{khemlani:2012}
-shows, humans seem to
+As shown by~\cite{khemlani:2012}, humans seem to
 distinguish between \textit{some y are z} and \textit{all y are z} (\unknownGen).
 Accordingly, if we only observe that an object $o$ belongs to $y$ and $z$ then we do not want to conclude both, \textit{some y are z} and \textit{all y are z}.
 In order to distinguish between \textit{some y are z} and \textit{all y are z}, we introduce the following principle:  If we know that \textit{some y are z}, then there must not only be an object~$o_1$ which belongs to $y$ and $z$, but there must be another object $o_2$ which belongs to
@@ -741,7 +740,7 @@ $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC\ (no valid conclusion)] iff none of the previous conclusions can be derived.
 \end{description}
 For \MI yz (some) the conversion is explicitly specified, motivated by the (\converse) principle.
-By requiring for \MI yz (\MO yz, resp) the existence of an object with the first property $y$,
+By requiring for \MI yz (\MO yz, resp.) the existence of an object with the first property $y$,
 for which the second property $z$ has to be either either false or unknown (true or unknown, resp.),
 \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
 
@@ -1005,7 +1004,7 @@ Usually, as assessment, typical statistical evaluation criteria with respect to 
 
 \subsubsection{mReasoner}
 
-\cite{khemlani:2016} proposed an approach to model the individual reasoning patterns of the participants, and 
+\cite{khemlani:2016}\todo{R: cite als Konstituent} proposed an approach to model the individual reasoning patterns of the participants, and 
 showed that different participants seem to derive different conclusions.
 Their approach is built on top of the mReasoner~\cite{khemlani:2013}, an extension of the mental model theory~\cite{johnsonlaird:1983}.
 Reasoning depends on the construction and manipulation of mental models, based on 3 fundamental principles: 
@@ -1013,16 +1012,16 @@ Reasoning depends on the construction and manipulation of mental models, based o
  The procedure of mReasoner consists of two steps:
 (1) The construction of a small set of models that represents the terms of the premises, and
 (2) the call of a deliberative component to search for counterexamples to conclusions.
-They specified four parameters for the construction of a mental model and evaluated their
+They\todo{R: oder doch ``Khemlani''? ;)} specified four parameters for the construction of a mental model and evaluated their
 predictions based on 2 datasets, week 1 and week 2, for 20 participants.
 The parameters for the construction of the mental models are (i) the 
-size of a mental model, (ii) the probability of drawing a conclusions only from the most common mental models, or from the complete set,
+size of a mental model, (ii) the probability of drawing conclusions only from the most common mental models, or from the complete set,
 (iii) the probability to search for counter examples,
 and (iv) the probability to weaken the conclusion.
 The clustering with mReasoner was based on a particular clustering algorithm to determine the optimal number of clusters for their dataset.
 The K-means clustering algorithm was used to divide participants into clusters and then
 the mReaoner to simulated the clusters by choosing appropriate parameter settings.
-\cite{khemlani:2016} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
+\cite{khemlani:2016}\todo{R: cite als Konstituent} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
 The approach is novel in the sense that until now no other cognitive theory tried to rigorously account for individual differences in human syllogistic reasoning. However, their approach seems to have two drawbacks. First, some of their 
 parameters were of probabilistic nature, i.e.\ there is no explaining factor behind them. Second, the authors did not distinguish between the participants' 
 responses in week 1 and week 2, but instead merged the responses. This might give a distorted picture, as participants could
@@ -1179,7 +1178,7 @@ is characterized by the participants whose answers corresponded to the predictio
  
  
 We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by~\cite{khemlani:2016}.
-\cite{khemlani:2016} is the only approach we are aware of that has evaluated predictions on human syllogistic reasoning
+\cite{khemlani:2016}\todo{R: cite als Konstituent} is the only approach we are aware of that has evaluated predictions on human syllogistic reasoning
 with respect to the non-aggregated data.
 However in contrast to here, they did not distinguish between the participants' responses in week 1 and week 2.
  
