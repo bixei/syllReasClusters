@@ -101,7 +101,7 @@ from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
 % this expertise was not consulted, i.e. there was no communication among the relevant fields. 
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
-In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~\cite{ragni:stolzenburg:2015} as a starting point:
+In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~the suggestion by Ragni and Stolzburg~\cite{ragni:stolzenburg:2015} as a starting point:
 We aim for a theory in which (i) all processes are comprehensible, (ii) the suggested underlying represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
 
 % Yet, the cognitive adequacy of a theory can only be measured, if that theory is evaluable, i.e.\ if the theory can uniformally account for episodes of human reasoning systematically, according to its underlying assumptions. 
@@ -109,7 +109,7 @@ We aim for a theory in which (i) all processes are comprehensible, (ii) the sugg
 % 
 % Formal methods can offer the required tools to implement such cognitive theories. This in turn, can allow a new way of communication among the fields, by avoiding ambiguous definitions, showing their formal correspondences and finally providing appropriate evaluation methods with respect to their cognitive adequacy. 
 % A major drawback of 
-The results of the meta-study on syllogistic reasoning in~\cite{khemlani:2012} show that the answers given by humans do not only systematically differ from the valid conclusions under CL, but from any other proposed cognitive theory (cf.~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
+The results of the meta-study on syllogistic reasoning by Khemlani and Johnson-Laird~\cite{khemlani:2012} show that the answers given by humans do not only systematically differ from the valid conclusions under CL, but from any other proposed cognitive theory (cf.~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
 % Possibly one of the reasons could be that none of the suggested cognitive theories so far has accounted for differences among individuals, i.e.\ they only considered the data summed up with respect to the individual answer possibilities. 
 % As recent investigations on psychological experiments show (cf.~\cite{khemlani:2016, ragni:2017}), it seems that different humans represent and reason about conditional information differently.
 % This implies that \textit{the} human reasoner does not exist, instead there 
@@ -172,7 +172,7 @@ For instance, consider the following pair of syllogistic premises:
 \end{align}
 Given these
 two premises, which conclusion on the relation between \emph{artists} and \emph{chemists} necessarily follows?
-According to the authors in~\cite{khemlani:2012}, the majority of participants in experimental studies
+According to Khemlani and Johnson-Laird~\cite{khemlani:2012}, the majority of participants in experimental studies
 concluded \emph{No chemists are artists} (29\;\%) and \emph{No valid conclusion} (27\;\%).
 The valid conclusion under CL, \emph{Some artists are not chemists},
 was concluded by only 16\,\%, which is exactly the threshold that the answer had not been chosen randomly~\cite{khemlani:2012}.
@@ -226,7 +226,7 @@ for the development of an adequate cognitive theory. Only recently approaches ha
 % previous training of the individual participant, ...
 
 Here, we focus on a qualitative assessment of the clustering approach proposed in~\cite{declare:2017},
-in the sense that we investigate the individual participants' conclusions with respect to the non-aggregated dataset provided by the authors in~\cite{khemlani:2016}.
+in the sense that we investigate the individual participants' conclusions with respect to the non-aggregated dataset provided by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
 In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach and the formal representation of cognitive principles within this approach. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach presented in~\cite{declare:2017} on non-aggregated data.
 Section~\ref{sect:nonag} provides a more adequate characterization of the individuals' reasoning patterns.
 
@@ -236,7 +236,7 @@ Clustering by principles under WCS was first presented in~\cite{declare:2017};
 the authors conjectured that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
 whereas heuristic strategies describe the methods that are applied when
 conclusions are not derived by reasoning but instead based on structural patterns or {biases}.
-This approach is an extension of the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
+This approach is an extension of the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches by Khemlani an Johnson-Laird~\cite{khemlani:2012}.
 % The system developed in~\cite{declare:2017}, was extended and participated at the Syllogism Challenge 2017.\footnote{\url{https://www.cc.uni-freiburg.de/modelingchallenge/challenge-2017}} 
 Figure~\ref{overview:system:syllchal} illustrates the components of the system:
 First, groups of reasoners were specified based on a set of underlying cognitive principles and heuristic strategies.
@@ -440,7 +440,7 @@ iff all clauses in~$\CalIC$ are true under~$I$.
 \subsection{Reasoning with Respect to the Least Fixed Point of $\Svlp$}\label{sect:lfp}
 
 
-Consider the following semantic operator~\cite{stenning:vanlambalgen:2008}: Let $I = \langle I^\top,I^\bot
+Consider the following semantic operator introduced by Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}: Let $I = \langle I^\top,I^\bot
 \rangle$ be an interpretation. $\Phi_\CalP (I) =
 \langle J^\top,J^\bot\rangle$, where
 \[
@@ -516,7 +516,7 @@ A complete specification of the logic programs with respect to the moods accordi
 \subsubsection{Conditional Representation (\conditionals) and License for Inference (\licenses)}\label{sect:condli}
 Consider \textit{All y are z} ({\MA yz}), which in CL, is represented as $\forall X (y(X) \rightarrow z(X))$.
 Similarly, we assume that humans also understand this statement as a conditional sentence (\conditionals).
-However, it seems that humans understand them defeasibly, i.e., they assume a \textit{license for the inference}~\cite{stenning:vanlambalgen:2008} and might allow exceptions to the conditional (\licenses). For (\MA yz) this can be 
+However, it seems that humans understand them defeasibly. According to Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}, they assume a \textit{license for the inference} and might allow exceptions to the conditional (\licenses). For (\MA yz) this can be 
 explicitly expressed by 
 \textit{all $y$ that are not abnormal are $z$}.
 % \\
@@ -529,7 +529,7 @@ By default, we assume that \textit{nothing is abnormal}. % with respect to $X$}:
 
 \subsubsection{Existential Import (\import)}
 
-Furthermore, humans have a pragmatic understanding of quantifiers in the language~\cite{grice1975}.
+Furthermore, according to Grice~\cite{grice1975}, humans have a pragmatic understanding of quantifiers in the language.
 For instance, in natural language, we normally do not quantify over things that do not exist.
 Consequently, \textit{All $z$} implies \textit{Some $z$ exist}.
 This is known as the \textit{Gricean implicature} or the \textit{existential import} (\import),
@@ -580,7 +580,7 @@ z'(X)$. We obtain
 \subsubsection{Converse Implication (\converse) and \\ Unknown Generalization (\unknownGen)}
 Consider the statement \textit{Some y are z.} ({\MI yz}), which in CL, is represented as $\exists X (y(X) \wedge z(X))$
 and which is semantically equivalent to $\exists X(z(X) \wedge y(X))$ (\converse).
-As shown by~\cite{khemlani:2012}, humans seem to
+As shown by Khemlani and Johnson-Laird~\cite{khemlani:2012}, humans seem to
 distinguish between \textit{some y are z} and \textit{all y are z} (\unknownGen).
 Accordingly, if we only observe that an object $o$ belongs to $y$ and $z$ then we do not want to conclude both, \textit{some y are z} and \textit{all y are z}.
 In order to distinguish between \textit{some y are z} and \textit{all y are z}, we introduce the following principle:  If we know that \textit{some y are z}, then there must not only be an object~$o_1$ which belongs to $y$ and $z$, but there must be another object $o_2$ which belongs to
@@ -765,7 +765,7 @@ The interested reader is referred to~\cite{declare:2017} for details on their ap
 The three reasoning clusters have been characterized by the following principles:\footnote{{\footnotesize\textsf{basic}} refers to the set of basic principles introduced in Subsection~\ref{sect:basic}.} (1) \basic, \converse\ for \MI, and \abduction,
     (2) \basic, \converse\ for \MI, and \negFailure, and
     (3) \basic, \converse\ for \MI\ and \ME, and \contraposition\ for~\MA.
-This approach achieved a match of 92\;\% with the aggregated data reported in~\cite{khemlani:2012}, and was the highest result compared to the presented approaches in~\cite{khemlani:2012}.
+This approach achieved a match of 92\;\% with the aggregated data reported in~\cite{khemlani:2012}, and was the highest result compared to the presented approaches.
 
 Table~\ref{tab:cluster} summarizes the three clusters together with their conclusions for \MI\ME 2.
 \begin{table}
@@ -863,7 +863,7 @@ for all objects which have the property $c$, (which only applies for $o_5$), the
 
 On aggregated data, the clusters performed fairly well with a match of 92\;\%. 
 We are interested whether these clusters also correspond to the reasoning patterns observed among individuals. 
-For this purpose, we investigated the non-aggregated dataset provided by~\cite{khemlani:2016} consisting of the responses of 20 participants for two weeks,
+For this purpose, we investigated the non-aggregated dataset provided by Johnson-Laird and Khemlani~\cite{khemlani:2016} consisting of the responses of 20 participants for two weeks,
 i.e.\ the participants carried out the task twice, with a break of one week. 
 The results are two-fold:
 \begin{description}
@@ -1004,15 +1004,15 @@ Usually, as assessment, typical statistical evaluation criteria with respect to 
 
 \subsubsection{mReasoner}
 
-\cite{khemlani:2016}\todo{R: cite als Konstituent} proposed an approach to model the individual reasoning patterns of the participants, and 
+Johnson-Laird and Khemlani~\cite{khemlani:2016} proposed an approach to model the individual reasoning patterns of the participants, and 
 showed that different participants seem to derive different conclusions.
-Their approach is built on top of the mReasoner~\cite{khemlani:2013}, an extension of the mental model theory~\cite{johnsonlaird:1983}.
+Their approach is built on top of the mReasoner~\cite{khemlani:2013}, an extension of the mental model theory, first introduced by Johnson-Laird~\cite{johnsonlaird:1983}.
 Reasoning depends on the construction and manipulation of mental models, based on 3 fundamental principles: 
 (i) represent possibilities, (ii) principle of iconicity, and (iii) principle of dual processes.
  The procedure of mReasoner consists of two steps:
 (1) The construction of a small set of models that represents the terms of the premises, and
 (2) the call of a deliberative component to search for counterexamples to conclusions.
-They\todo{R: oder doch ``Khemlani''? ;)} specified four parameters for the construction of a mental model and evaluated their
+Johnson-Laird and Khemlani specified four parameters for the construction of a mental model and evaluated their
 predictions based on 2 datasets, week 1 and week 2, for 20 participants.
 The parameters for the construction of the mental models are (i) the 
 size of a mental model, (ii) the probability of drawing conclusions only from the most common mental models, or from the complete set,
@@ -1021,7 +1021,7 @@ and (iv) the probability to weaken the conclusion.
 The clustering with mReasoner was based on a particular clustering algorithm to determine the optimal number of clusters for their dataset.
 The K-means clustering algorithm was used to divide participants into clusters and then
 the mReaoner to simulated the clusters by choosing appropriate parameter settings.
-\cite{khemlani:2016}\todo{R: cite als Konstituent} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
+Johnson-Laird and Khemlani~\cite{khemlani:2016} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
 The approach is novel in the sense that until now no other cognitive theory tried to rigorously account for individual differences in human syllogistic reasoning. However, their approach seems to have two drawbacks. First, some of their 
 parameters were of probabilistic nature, i.e.\ there is no explaining factor behind them. Second, the authors did not distinguish between the participants' 
 responses in week 1 and week 2, but instead merged the responses. This might give a distorted picture, as participants could
@@ -1141,8 +1141,8 @@ $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average
 \label{tab:individual}}
 \end{table}
 
-The non-aggregated data provided by~\cite{khemlani:2016} included a dataset of 20 participants,
-for which the task was carried out twice, with a break of one week. On average, the basic principles explained the results about 10\;\% better than CL.
+The non-aggregated data included a dataset of 20 participants,
+for which the task was carried out twice, with a break of one week~\cite{khemlani:2016}. On average, the basic principles explained the results about 10\;\% better than CL.
  Generally, the participants who were strong in CL/ contraposition, drew fewer conclusions according to abduction/ generalization, and vice versa.
  The changes within participant's answers from one to the other week was high, with 52/64 on average. 
  From week 1 to week 2, an increase with respect to CL (19/20, 6\;\%), basic (18/20, 6\;\%), contraposition (15/20, 5\;\%)
@@ -1154,10 +1154,12 @@ NVC (column 3) denotes how frequently participants responded \textit{no valid co
 frequently participants changed their answers from week 1 to week 2. 
 The symbols $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average, respectively.
 
-Similar to~\cite{khemlani:2016}, we identified three different clusters: 
-The last two columns show the classification of the participants as deliberative, intuitive or intermediate. The participants in the deliberative cluster here corresponds exactly to~\cite{khemlani:2016}. 
-Our classification only differs to~\cite{khemlani:2016} for the intermediate and intuitive cluster with respect to three participants (1, 11 and 19).
-A possible explanation for this difference, could be that~\cite{khemlani:2016}
+We identified three different clusters: 
+The last two columns show the classification of the participants as deliberative, intuitive or intermediate. 
+% The participants in the deliberative cluster here corresponds exactly to~\cite{khemlani:2016}. 
+Our classification only differs wrt Johnson-Laird and Khemlani's 
+classification~\cite{khemlani:2016} for the intermediate and intuitive cluster with respect to three participants (1, 11 and 19).
+A possible explanation for this difference, could be that they
 did not take into account the participants' changes between week 1 and week 2.
 
 
@@ -1177,8 +1179,8 @@ is characterized by the participants whose answers corresponded to the predictio
  \section{Conclusions and Future Directions}
  
  
-We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by~\cite{khemlani:2016}.
-\cite{khemlani:2016}\todo{R: cite als Konstituent} is the only approach we are aware of that has evaluated predictions on human syllogistic reasoning
+We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by Johnson-Laird and Khemlanid~\cite{khemlani:2016}.
+Their approach is the only one we are aware of that has evaluated predictions on human syllogistic reasoning
 with respect to the non-aggregated data.
 However in contrast to here, they did not distinguish between the participants' responses in week 1 and week 2.
  
@@ -1193,7 +1195,8 @@ Furthermore, it is quite likely that the set of cognitive principles presented i
 
 % Static clusters for each participant might not be appropriate, rather, a sequential application of cognitive principles seems to be more likely
 For the future, we need to investigate whether the sequential application of the cognitive principles 
-can give us more insights on the participants' reasoning pattern. In particular, our hypothesis is that these principles might correspond to some of the reasoning steps within the insight model~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}. Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested in~\cite{ragni:2017}.
+can give us more insights on the participants' reasoning pattern. In particular, our hypothesis is that these principles might correspond to some of the reasoning steps within the insight model
+by Johnson-Laird and Wason~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}. Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested by Ragni, Kola and Johnson-Laird~\cite{ragni:2017}.
 This in turn might give us a new starting point to investigate whether the cognitive principles  specified here can characterize participants' conclusions in other reasoning episodes.
 
 Another interesting aspect is to investigate in how far the semantics of the $\cxt$ operator within the extended three-valued {\L}ukasiewicz logic in Section~\ref{sub:3valuedL} 
