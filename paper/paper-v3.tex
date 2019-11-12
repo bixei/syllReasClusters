@@ -516,7 +516,7 @@ A complete specification of the logic programs with respect to the moods accordi
 \subsubsection{Conditional Representation (\conditionals) and License for Inference (\licenses)}\label{sect:condli}
 Consider \textit{All y are z} ({\MA yz}), which in CL, is represented as $\forall X (y(X) \rightarrow z(X))$.
 Similarly, we assume that humans also understand this statement as a conditional sentence (\conditionals).
-However, it seems that humans understand them defeasibly. According to Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}, they assume a \textit{license for the inference} and might allow exceptions to the conditional (\licenses). For (\MA yz) this can be 
+However, it seems that humans understand them defeasibly. According to Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}, they assume a \textit{license for the inference} and might allow exceptions to the conditional (\licenses). For \MA yz this can be 
 explicitly expressed by 
 \textit{all $y$ that are not abnormal are $z$}.
 % \\
@@ -536,14 +536,14 @@ This is known as the \textit{Gricean implicature} or the \textit{existential imp
 which also corresponds to the Aristotelian interpretation~\cite{parry:1991} and is assumed by several cognitive theories (cf.~\cite{johnsonlaird:1983,Rips1994}). 
 %  Likewise,~\cite{stenning:vanlambalgen:2008} have shown that humans
 % require existential import for a conditional to be true.
-Together with the introduced cognitive principles in Section~\ref{sect:condli}, the logic program representing (\MA yz), $\CalP_{Ayz}$, is as follows:
+Together with the introduced cognitive principles in Section~\ref{sect:condli}, the logic program representing \MA yz, $\CalP_{Ayz}$, is as follows:
 \begin{align} %{rll@{\hspace{\hfill}}r}
 z(X) & \leftarrow  y(X) \wedge \neg \Ab_{yz}(X). 
 \tag{\conditionals\ \&\ \licenses} \\
 \Ab_{yz}(X) & \leftarrow \cxt(z'(X)). \tag{\licenses}\\
 y(o) & \leftarrow \top. \tag{\import}
 \end{align}
-Note that $z'(X)$ appears within the $\cxt$ operator in the body of the second clause, where $z'$ represents the negation of $z$:\footnote{$z'(X)$ will be introduced by the (\footnotesize{\textsf{transformation}}) principle in Section~\ref{sect:dneg}.}
+Note that $z'(X)$ appears within the $\cxt$ operator in the body of the second clause, where $z'$ represents the negation of $z$:\footnote{$z'(X)$ will be introduced by the \footnotesize{\textsf{transformation}} principle in Section~\ref{sect:dneg}.}
 Nothing is abnormal, unless the negation of $z$ is true.
 % , then $\Ab_{yz}(X)$ is false, for which then, given the first clause in $\CalP_{Ayx}$, $z(o)$ is true, if $y(o)$ is true. Note that, if $z'(X)$ would be written instead of $\cxt(z'(X))$, in the case where $\cxt(z'(o))$ is unknown, $z(o)$ could not be concluded, even if $y(o)$ would be true. This is due to the fact that negation in WCS is understood as strong negation.\footnote{This is different in other logic programming approaches, i.e.\ well-founded semantics.}
 % \end{align}
@@ -554,12 +554,12 @@ We obtain \quad $\CalM_{\CalP_{Ayz}} = \langle \{y(o),z(o)\}, \{\Ab_{yz}(o)\} \r
 \subsubsection{Negation by Transformation (\transformation) and \\No Double Negation (\dnegation)} \label{sect:dneg}
 
 Consider the statement \textit{No y is z.} ({\ME yz}):
-Similarly to the previous case, (\licenses) and (\import) apply here
+Similarly to the previous case, \licenses and \import apply here
 as well.
 The logic programs specified in Subsection~\ref{sect:wcs} 
 do not allow heads of clauses to be negative literals. Therefore, a negative conclusion~$\neg p(X)$ is represented
 by introducing an auxiliary formula $p'(X)$ together with the clause $p(X) \leftarrow \neg p'(X)$ and the integrity constraint $\udf \leftarrow p(X) \wedge p'(X)$ (\transformation). This is a widely used technique in Logic Programming (e.g. choice rules in~\cite{GebserKaminskiKaufmannSchaub12}). 
-Another principle that we introduce is the \emph{no double negation} principle: Under the Weak Completion Semantics, a positive conclusion can be derived from double negation appearing in two conditionals. However, it seems that humans normally do not reason in such a way~\cite{khemlani:2012}. Hence, we block them with the help of abnormalities (\dnegation). $\CalP_{Eyz}$, the logic program representing (\ME yz) is as follows:
+Another principle that we introduce is the \emph{no double negation} principle: Under the Weak Completion Semantics, a positive conclusion can be derived from double negation appearing in two conditionals. However, it seems that humans normally do not reason in such a way~\cite{khemlani:2012}. Hence, we block them with the help of abnormalities (\dnegation). $\CalP_{Eyz}$, the logic program representing \ME yz is as follows:
 % \footnote{For simplicity, we omitted to list the clauses that are introduced by the (\converse) principle in $\CalP_{Eyz}$: The same clauses just switching $y$ and $z$ are added and thus also the fact $z(o_2) \leftarrow \top$ for another object $o_2$.
 % The entire program can be found in~\cite{declare:2017}.}
 \begin{align}
@@ -585,7 +585,7 @@ distinguish between \textit{some y are z} and \textit{all y are z} (\unknownGen)
 Accordingly, if we only observe that an object $o$ belongs to $y$ and $z$ then we do not want to conclude both, \textit{some y are z} and \textit{all y are z}.
 In order to distinguish between \textit{some y are z} and \textit{all y are z}, we introduce the following principle:  If we know that \textit{some y are z}, then there must not only be an object~$o_1$ which belongs to $y$ and $z$, but there must be another object $o_2$ which belongs to
 $y$ and which does not belong to~$z$.
-$\CalP_{Iyz}$, the logic program representing (\MI yz), is as follows:\footnote{For simplicity, here we omit the clauses introduced by ({\footnotesize\textsf{converse}}). They can be found in~\cite{declare:2017}.}
+$\CalP_{Iyz}$, the logic program representing \MI yz, is as follows:\footnote{For simplicity, here we omit the clauses introduced by ({\footnotesize\textsf{converse}}). They can be found in~\cite{declare:2017}.}
 \begin{align}
 z(X) & \leftarrow y(X) \wedge \neg \Ab_{yz}(X). & \tag{\conditionals\ \&\ \licenses}\\
 \Ab_{yz}(o_1) & \leftarrow  \bot. & \tag{\unknownGen\ \& \ \licenses}\\
@@ -600,9 +600,9 @@ $\CalP_{Iyz}$ and,
 hence, $\CalM_{\CalP_{Iyz}}(z(o_2)) = \udf$.
 
 Consider the statement \textit{Some y are not z} ({\MO yz}), which in CL is represented as $\exists X (y(X) \wedge \neg z(X)$.
-As in the previous cases, (\conditionals), (\licenses) and (\unknownGen) are assumed.
-As the conclusion is again a negation of a claim, (\transformation) and
-(\dnegation) apply as well. $\CalP_{Oyz}$, the logic program representing (\MO yz) is as follows:
+As in the previous cases, \conditionals, \licenses and \unknownGen are assumed.
+As the conclusion is again a negation of a claim, \transformation and
+\dnegation apply as well. $\CalP_{Oyz}$, the logic program representing \MO yz is as follows:
 \begin{align}
 z'(X) & \leftarrow y(X) \wedge \neg \Ab_{ynz}(X). & \tag{\conditionals\ \&\ \transformation \ \&\ \licenses} \\
 \Ab_{ynz}(o_1) & \leftarrow \bot. & \tag{\licenses\ \& \unknownGen} \\
@@ -634,14 +634,14 @@ equivalent to its contrapositive, $\forall (X) (\neg b(X) \rightarrow \neg a(X))
 There is
 evidence that some of the participants might directly or indirectly 
 apply the contrapositive (\contraposition) within a reasoning task (cf.~\cite{rips:1994,mentallogic:1994}).
-Consider again $\CalP_{Ayz}$, the logic program representing (\MA yz)
+Consider again $\CalP_{Ayz}$, the logic program representing \MA yz
 from Section~\ref{sect:basic}. The clauses that represent the contraposition principles are as follows:
 \begin{align}
 y'(X) & \leftarrow  \neg z(X) \wedge \neg \Ab_{zy}(X). & \tag{\conditionals\ \&\ \licenses\ \&\ \contraposition\ } \\
 \Ab_{zy}(X) & \leftarrow \cxt(y(X)). & \tag{ \licenses\ \&\ \contraposition}\\
 y(X) & \leftarrow  \neg y'(X) \wedge \neg \Ab_{nyy}(X). & \tag{\transformation\ \&\ \licenses\ \&\ \contraposition} 
 \end{align}
-The application of (\contraposition) for the \ME\ mood,
+The application of \contraposition for the \ME\ mood,
 \textit{No y is z}, yields \textit{No z is y}, and consists of the following clauses:
 \begin{align}
 y'(X) & \leftarrow z(X) \wedge \neg \Ab_{zny}(X). & \tag{\conditionals\ \&\ \licenses\ \&\ \contraposition\ } \\
@@ -660,7 +660,7 @@ y(X) & \leftarrow \neg y'(X) \wedge \neg \Ab_{nyy}(X). & \tag{\transformation\ \
 
 If all principles introduced so far are applied to a pair of existentially quantified premises
 (\MI or \MO), then the only object about which an inference can be made is the one
-resulting from (\import) with respect to the premise it introduced (i.e.\ only inferences about the properties 
+resulting from \import with respect to the premise it introduced (i.e.\ only inferences about the properties 
 of the object about $a$ and $b$ or
 $b$ and $c$). 
 % This is because the
@@ -671,16 +671,16 @@ There is, however, evidence that some humans still draw conclusions about $a$ an
 circumstances, i.e.\ they seem to generalize (universally quantify) the existential 
 premise with respect to other objects (\negFailure).
 Consider again $\CalP_{I yz}$ of Section~\ref{sect:basic}, where $\Ab_{yz}$ is only false for 
-$o_1$. In case (\negFailure) applies, then $\Ab_{yz}(o_1) \leftarrow \bot$
+$o_1$. In case \negFailure applies, then $\Ab_{yz}(o_1) \leftarrow \bot$
 in $\CalP_{I yz}$ is replaced by the following two clauses:
 \begin{align}
 \Ab_{yz}(X) & \leftarrow \cxt(z'(X)). & \tag{\licenses\ \&\ \negFailure} \\
 \Ab_{yz}(o_2) & \leftarrow \udf. & \tag{\licenses\ \&\ \negFailure} 
 \end{align}
-Similar to the case of $\CalP_{Ayz}$ for the representation of the basic principles of (\MA yz),
+Similar to the case of $\CalP_{Ayz}$ for the representation of the basic principles of \MA yz,
 the $\cxt$ operator in the body of the first clause is false for all $o$
 for which $z'(o)$ is unknown. This clause transforms the representation for the existential quantification over \MI yz in $\CalP_{Iyz}$
-into a universal one. In order to maintain (\unknownGen), the second clause is added:
+into a universal one. In order to maintain \unknownGen, the second clause is added:
 $\Ab_{yz}(o_2) \leftarrow \udf$ guarantees that $\Ab_{yz}(o_2)$ stays unknown, even though $\cxt(z'(o_2))$ might be false.
 Recall that programs are considered under their weak completion, i.e.\ if $\cxt(z'(o_2))$ is false, then
 \[\Ab_{yz}(o_2) \leftrightarrow (\cxt(z'(o_2)) \vee \udf)
@@ -692,10 +692,9 @@ Recall that programs are considered under their weak completion, i.e.\ if $\cxt(
 
 \subsubsection{Search for Alternative Conclusions (\abduction)}
 
-When participants are faced with an \NVC\ conclusion (\textit{No valid conclusion}), they might not want to accept this conclusion and proceed to check whether there exists unknown information that might be relevant (\abduction). This information may be explanations about
+When participants are faced with \NVC\ (\textit{No valid conclusion}), they might not want to accept this conclusion and proceed to check whether there exists unknown information that might be relevant. This information may be explanations about
 facts introduced either from an existential import or from unknown generalization. 
-We use the first as source for observations, as they are used directly to infer new information. 
-Consider the following pair of syllogistic premises: 
+We use the first as source for observations, as they are used directly to infer new information  (\abduction). Consider the following pair of syllogistic premises: 
 \begin{align}
  \emph{All artists are bakers. } & \emph{Some bakers are not chemists.} \tag{AO1} 
 \end{align}
@@ -739,7 +738,7 @@ object $o_2$ such that $\CalP \ModelsWCS y(o_2)$ and
 $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC\ (no valid conclusion)] iff none of the previous conclusions can be derived.
 \end{description}
-For \MI yz (some) the conversion is explicitly specified, motivated by the (\converse) principle.
+For \MI yz (some) the conversion is explicitly specified, motivated by the \converse principle.
 By requiring for \MI yz (\MO yz, resp.) the existence of an object with the first property $y$,
 for which the second property $z$ has to be either either false or unknown (true or unknown, resp.),
 \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
