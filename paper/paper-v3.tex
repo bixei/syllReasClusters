@@ -101,7 +101,7 @@ from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
 % this expertise was not consulted, i.e. there was no communication among the relevant fields. 
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
-In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~the suggestion by Ragni and Stolzburg~\cite{ragni:stolzenburg:2015} as a starting point:
+In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~the suggestion by Ragni and Stolzenburg~\cite{ragni:stolzenburg:2015} as a starting point:
 We aim for a theory in which (i) all processes are comprehensible, (ii) the suggested underlying represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
 
 % Yet, the cognitive adequacy of a theory can only be measured, if that theory is evaluable, i.e.\ if the theory can uniformally account for episodes of human reasoning systematically, according to its underlying assumptions. 
@@ -554,7 +554,7 @@ We obtain \quad $\CalM_{\CalP_{Ayz}} = \langle \{y(o),z(o)\}, \{\Ab_{yz}(o)\} \r
 \subsubsection{Negation by Transformation (\transformation) and \\No Double Negation (\dnegation)} \label{sect:dneg}
 
 Consider the statement \textit{No y is z.} ({\ME yz}):
-Similarly to the previous case, \licenses and \import apply here
+Similarly to the previous case, \licenses\ and \import\ apply here
 as well.
 The logic programs specified in Subsection~\ref{sect:wcs} 
 do not allow heads of clauses to be negative literals. Therefore, a negative conclusion~$\neg p(X)$ is represented
@@ -600,9 +600,9 @@ $\CalP_{Iyz}$ and,
 hence, $\CalM_{\CalP_{Iyz}}(z(o_2)) = \udf$.
 
 Consider the statement \textit{Some y are not z} ({\MO yz}), which in CL is represented as $\exists X (y(X) \wedge \neg z(X)$.
-As in the previous cases, \conditionals, \licenses and \unknownGen are assumed.
-As the conclusion is again a negation of a claim, \transformation and
-\dnegation apply as well. $\CalP_{Oyz}$, the logic program representing \MO yz is as follows:
+As in the previous cases, \conditionals, \licenses, and \unknownGen are assumed.
+As the conclusion is again a negation of a claim, \transformation\ and
+\dnegation\ apply as well. $\CalP_{Oyz}$, the logic program representing \MO yz is as follows:
 \begin{align}
 z'(X) & \leftarrow y(X) \wedge \neg \Ab_{ynz}(X). & \tag{\conditionals\ \&\ \transformation \ \&\ \licenses} \\
 \Ab_{ynz}(o_1) & \leftarrow \bot. & \tag{\licenses\ \& \unknownGen} \\
@@ -641,7 +641,7 @@ y'(X) & \leftarrow  \neg z(X) \wedge \neg \Ab_{zy}(X). & \tag{\conditionals\ \&\
 \Ab_{zy}(X) & \leftarrow \cxt(y(X)). & \tag{ \licenses\ \&\ \contraposition}\\
 y(X) & \leftarrow  \neg y'(X) \wedge \neg \Ab_{nyy}(X). & \tag{\transformation\ \&\ \licenses\ \&\ \contraposition} 
 \end{align}
-The application of \contraposition for the \ME\ mood,
+The application of \contraposition\ for the \ME\ mood,
 \textit{No y is z}, yields \textit{No z is y}, and consists of the following clauses:
 \begin{align}
 y'(X) & \leftarrow z(X) \wedge \neg \Ab_{zny}(X). & \tag{\conditionals\ \&\ \licenses\ \&\ \contraposition\ } \\
@@ -660,7 +660,7 @@ y(X) & \leftarrow \neg y'(X) \wedge \neg \Ab_{nyy}(X). & \tag{\transformation\ \
 
 If all principles introduced so far are applied to a pair of existentially quantified premises
 (\MI or \MO), then the only object about which an inference can be made is the one
-resulting from \import with respect to the premise it introduced (i.e.\ only inferences about the properties 
+resulting from \import\ with respect to the premise it introduced (i.e.\ only inferences about the properties 
 of the object about $a$ and $b$ or
 $b$ and $c$). 
 % This is because the
@@ -671,7 +671,7 @@ There is, however, evidence that some humans still draw conclusions about $a$ an
 circumstances, i.e.\ they seem to generalize (universally quantify) the existential 
 premise with respect to other objects (\negFailure).
 Consider again $\CalP_{I yz}$ of Section~\ref{sect:basic}, where $\Ab_{yz}$ is only false for 
-$o_1$. In case \negFailure applies, then $\Ab_{yz}(o_1) \leftarrow \bot$
+$o_1$. In case \negFailure\ applies, then $\Ab_{yz}(o_1) \leftarrow \bot$
 in $\CalP_{I yz}$ is replaced by the following two clauses:
 \begin{align}
 \Ab_{yz}(X) & \leftarrow \cxt(z'(X)). & \tag{\licenses\ \&\ \negFailure} \\
@@ -738,7 +738,7 @@ object $o_2$ such that $\CalP \ModelsWCS y(o_2)$ and
 $\CalP \not\ModelsWCS \neg z(o_2)$.
 \item[\NVC\ (no valid conclusion)] iff none of the previous conclusions can be derived.
 \end{description}
-For \MI yz (some) the conversion is explicitly specified, motivated by the \converse principle.
+For \MI yz (some) the conversion is explicitly specified, motivated by the \converse\ principle.
 By requiring for \MI yz (\MO yz, resp.) the existence of an object with the first property $y$,
 for which the second property $z$ has to be either either false or unknown (true or unknown, resp.),
 \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
@@ -1156,9 +1156,9 @@ The symbols $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below,
 We identified three different clusters: 
 The last two columns show the classification of the participants as deliberative, intuitive or intermediate. 
 % The participants in the deliberative cluster here corresponds exactly to~\cite{khemlani:2016}. 
-Our classification only differs wrt Johnson-Laird and Khemlani's 
+Our classification only differs wrt.\ Johnson-Laird and Khemlani's 
 classification~\cite{khemlani:2016} for the intermediate and intuitive cluster with respect to three participants (1, 11 and 19).
-A possible explanation for this difference, could be that they
+A possible explanation for this difference could be that they
 did not take into account the participants' changes between week 1 and week 2.
 
 
@@ -1178,7 +1178,7 @@ is characterized by the participants whose answers corresponded to the predictio
  \section{Conclusions and Future Directions}
  
  
-We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by Johnson-Laird and Khemlanid~\cite{khemlani:2016}.
+We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
 Their approach is the only one we are aware of that has evaluated predictions on human syllogistic reasoning
 with respect to the non-aggregated data.
 However in contrast to here, they did not distinguish between the participants' responses in week 1 and week 2.
