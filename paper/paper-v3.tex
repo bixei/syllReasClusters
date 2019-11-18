@@ -5,6 +5,7 @@
 \usepackage[margin=3cm]{geometry}
 
 
+\usepackage[lf]{berenis}
 \renewcommand{\baselinestretch}{1.5} 
 
 \usepackage[hidelinks]{hyperref} 
@@ -90,8 +91,8 @@ Emmanuelle-Anna Dietz Saldanha and Richard M{\"o}rbitz\thanks{The authors are me
 % is of crucial interest for everyone. As it is not likely that humans will make the effort to understand their devices but instead they will place high demands on them, their devices should be able to adapt to the human needs in the best possible way. For instance, a system should be able to recognize small changes and additionally identify which environmental parameters are relevant for the current communication with its owner. This in turn should allow the device to adapt flexibly and independently to the environment it is currently situated in. In order to develop such a system, it is necessary to understand how humans think and to recognize their behavioral patterns. 
 
 Even though the main logical formalism of Classical Logic (CL) has successfully been applied to our scientific reasoning,
-various experimental studies have shown that human reasoning systematically deviates 
-from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
+it seems that already in 1913, Kotarbi{\'n}ski~\cite{kotarbinski:1913} \textit{suggested
+the need to revise the two-valued logic as it seemed to interfere with the freedom of human thinking}~\cite[p.17]{malinowski:1993}.
 % Originally, one of the objectives in the field of AI and logic programming was to formalize human reasoning and commonsense reasoning~\cite{McCarthy59,McCarthy98}. 
 % However, the proposed approaches have been strongly critized~(cf.~\cite{mcdermott:87}).
 % On the other hand, cognitive scientists have extensively investigated and acquired a great expertise
@@ -99,6 +100,14 @@ from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
 % % as they were mostly theoretical and did not apply to real case studies.
 % However, only recently an attempt was made 
 % this expertise was not consulted, i.e. there was no communication among the relevant fields. 
+Since then, various cognitive theories have been proposed,
+ but it seems that none of them is generally accepted
+within the community. As various experimental studies have shown that human reasoning systematically deviates from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}),
+cognitive scientists 
+seem at least to agree with Kotarbi{\'n}ski,
+ that classical (two-valued)
+logic would not be an adequate candidate for a cognitive theory.
+
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
 In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~the suggestion by Ragni and Stolzenburg~\cite{ragni:stolzenburg:2015} as a starting point:
@@ -146,7 +155,7 @@ A conclusion then consists of an assertion about two properties over terms where
 	\caption{The classical moods and their
 formalization\label{table:moods}.}
 	\end{minipage}
-    \begin{minipage}{0.34\textwidth}
+    \begin{minipage}{0.35\textwidth}
         \centering
 %  	\small
 	\begin{center}
@@ -428,7 +437,7 @@ F & \neg F\\ \midrule
 and \textit{unknown}, respectively.\label{tab:3vldluka}}
 \end{table}
 \footnotetext{Thanks to the
- anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiwicz's necessity operator~\cite[p. 20]{malinowski:1993}, restricted to literals.
+ anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiewicz necessity operator~\cite[p. 20]{malinowski:1993}, restricted to literals.
  }
 
 A set of \textit{integrity constraints} $\CalIC$ consists of clauses of
