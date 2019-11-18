@@ -102,15 +102,15 @@ from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}).
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
 In order to determine the required factors that are necessary for the evaluation of an adequate cognitive theory, we take~the suggestion by Ragni and Stolzenburg~\cite{ragni:stolzenburg:2015} as a starting point:
-We aim for a theory in which (i) all processes are comprehensible, (ii) the suggested underlying represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
+We aim for a theory in which (i) all processes are comprehensible, (ii) the underlying assumptions represent general cognitive processes, and (iii) the predictions of our theory are evaluated with respect to a wide range of human reasoning tasks. 
 
 % Yet, the cognitive adequacy of a theory can only be measured, if that theory is evaluable, i.e.\ if the theory can uniformally account for episodes of human reasoning systematically, according to its underlying assumptions. 
 % Only then, the cognitve adequacy of that theory can be compared to others.
 % 
 % Formal methods can offer the required tools to implement such cognitive theories. This in turn, can allow a new way of communication among the fields, by avoiding ambiguous definitions, showing their formal correspondences and finally providing appropriate evaluation methods with respect to their cognitive adequacy. 
 % A major drawback of 
-The results of the meta-study on syllogistic reasoning by Khemlani and Johnson-Laird~\cite{khemlani:2012} show that the answers given by humans do not only systematically differ from the valid conclusions under CL, but from any other proposed cognitive theory (cf.~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
-% Possibly one of the reasons could be that none of the suggested cognitive theories so far has accounted for differences among individuals, i.e.\ they only considered the data summed up with respect to the individual answer possibilities. 
+The results of the meta-study on syllogistic reasoning by Khemlani and Johnson-Laird~\cite{khemlani:2012} show that the responses given by humans do not only systematically differ from the valid conclusions under CL, but from any other proposed cognitive theory (cf.~\cite{BJ89,johnsonlaird:1983,Rips1994,Polk1995,chater:oaksford:1999}).
+% Possibly one of the reasons could be that none of the suggested cognitive theories so far has accounted for differences among individuals, i.e.\ they only considered the data summed up with respect to the individual response possibilities. 
 % As recent investigations on psychological experiments show (cf.~\cite{khemlani:2016, ragni:2017}), it seems that different humans represent and reason about conditional information differently.
 % This implies that \textit{the} human reasoner does not exist, instead there 
 % seem to exist various (human) reasoning clusters.
@@ -123,13 +123,13 @@ they are interesting because on one hand they are easy to understand and on the 
 they are complex enough to require actual reasoning. 
 A syllogism consists of two
 premises and one conclusion,
-each of which is a statement about properties over terms which can have one of the classical quantifiess in Table~\ref{table:moods} (called \emph{moods}). The pair of syllogistic premises can have four different orders as shown in Table~\ref{t:2} (called \emph{figures}). Based on these moods and figures, 64 different pairs of syllogistic premises can be constructed.
+each of which is a statement about properties over terms which can have one of the classical quantifiers in Table~\ref{table:moods} (called \emph{moods}). The pair of syllogistic premises can have four different orders as shown in Table~\ref{t:2} (called \emph{figures}). Based on these moods and figures, 64 different pairs of syllogistic premises can be constructed.
 A conclusion then consists of an assertion about two properties over terms where each of these properties occurs in exactly one of the premises, and there is a third property connecting both premises which does not occur in the conclusion.
 \begin{table}[t]
-    \begin{minipage}{0.6\textwidth}
+    \begin{minipage}{0.65\textwidth}
         \centering
 	\[	
-\begin{array}{@{\hspace{0.0cm}}l@{\hspace{0.1cm}}G@{\hspace{0.1cm}}l@{\hspace{0.3cm}}c}\toprule
+\begin{array}{@{\hspace{0.0cm}}l@{\hspace{0.4cm}}G@{\hspace{0.1cm}}l@{\hspace{0.3cm}}c}\toprule
 	\mbox{Mood} & \mbox{natural language} & \mbox{First-order Logic} &
 \mbox{Short} \\\midrule
 	\mbox{affirmative universal} & \mbox{\em all a are b} & \forall
@@ -143,10 +143,10 @@ A conclusion then consists of an assertion about two properties over terms where
 	\bottomrule
 	\end{array}
 	\]
-	\caption{The four moods and their
+	\caption{The classical moods and their
 formalization\label{table:moods}.}
 	\end{minipage}
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.34\textwidth}
         \centering
 %  	\small
 	\begin{center}
@@ -163,7 +163,7 @@ formalization\label{table:moods}.}
 		\end{array}
 		\]
 	\end{center}
-	\caption{The four figures.\label{t:2}}
+	\caption{The classical figures.\label{t:2}}
 	\end{minipage}
 \end{table}
 For instance, consider the following pair of syllogistic premises: 
@@ -175,7 +175,7 @@ two premises, which conclusion on the relation between \emph{artists} and \emph{
 According to Khemlani and Johnson-Laird~\cite{khemlani:2012}, the majority of participants in experimental studies
 concluded \emph{No chemists are artists} (29\;\%) and \emph{No valid conclusion} (27\;\%).
 The valid conclusion under CL, \emph{Some artists are not chemists},
-was concluded by only 16\,\%, which is exactly the threshold that the answer had not been chosen randomly~\cite{khemlani:2012}.
+was concluded by only 16\,\%, which is exactly the threshold that the response had not been chosen randomly~\cite{khemlani:2012}.
 % \footnote{
 % See
 %  Given that there are nine different possible conclusions, the chance that a conclusion has been chosen randomly is 1/9 = 11.1 \%. 
@@ -189,24 +189,24 @@ was concluded by only 16\,\%, which is exactly the threshold that the answer had
 % For the second step,  reasoning towards the least models of the weak completion of these programs under the three-valued
 % {\L}ukasiewicz Logic, is suggested.
 % One reason is because often only {aggregated data} of the experiments are accessible.
-% i.e.\ the data summed up with respect to the individual answer possibilities.
+% i.e.\ the data summed up with respect to the individual response possibilities.
 % The experimental set-up was made such that participants would only choose one possible conclusion, which implies that 
-% these answers excluded each other. In particular, it can be assumed that participants were at least minimally consistent in the sense that
+% these responses excluded each other. In particular, it can be assumed that participants were at least minimally consistent in the sense that
 % i.e.\ 
 % The majority's conclusions exclude each other, as the test was made such that
-Usually in these experiments, participants are supposed to give only one answer, thus all three (significant) answers
+Usually in these experiments, participants are supposed to give only one response, thus all three responses above
 were given by different participants. 
-% The ones who answered \emph{No valid conclusion}
-% were not the same ones who answered \emph{No chemists are artists} or \emph{Some artists are not chemists}, and vice versa.\footnote{}
+% The ones who responseed \emph{No valid conclusion}
+% were not the same ones who responseed \emph{No chemists are artists} or \emph{Some artists are not chemists}, and vice versa.\footnote{}
 
-A major drawback of the suggested cognitive theories so far is that only the participants'
+A major drawback of most cognitive theories is that only the participants'
 aggregated data was considered: These theories did not account for differences
-among individuals, i.e.\ they only considered the data summed up with respect to the individual answer possibilities. In contrast, non-aggregated data records the individual participants' response patterns, i.e.\ the complete set of responses that are given by each participant.
+among individuals, i.e.\ they only considered the data summed up with respect to the individual response possibilities. In contrast, non-aggregated data records the individual participants' response patterns, i.e.\ the complete set of responses that are given by each participant.
 
 
 As the above example and recent investigations on psychological experiments show (cf.~\cite{khemlani:2016, ragni:2017}), it seems that different humans represent and reason about conditionals differently.
 This implies that \textit{the} human reasoner does not exist, instead there 
-seem to exist various (human) reasoning clusters. The identification of these differences and the specification of these clusters is central 
+seem to exist various groups of reasoners, i.e.\ reasoning clusters. The identification of these differences and the specification of these clusters is central 
 for the development of an adequate cognitive theory. Only recently approaches have been proposed that account for individual differences (or clusters) in syllogistic reasoning (cf.~\cite{khemlani:2016,declare:2017}). 
 
 
@@ -214,36 +214,35 @@ for the development of an adequate cognitive theory. Only recently approaches ha
 % More interestingly are the following two observations:
 % The dataset in~\cite{khemlani:2016} provides an additional interesting information: 
 % Interestingly, when comparing the changes of results of each individual participant
-% from the first to the second week, it seems that their answers in the second week fits better the classical logic derivations. 
+% from the first to the second week, it seems that their responses in the second week fits better the classical logic derivations. 
 % We argue that these reasoners can be characterized by a set of cognitive principles, motivated from studies made in Cognitive Science.
 % First attempts to propose a model that distinguishes between human reasoners have been proposed in~\cite{khemlani:2016}. 
 % The authors identify three different clusters of reasoners labeled as intuitive, intermediate and deliberative. They propose an approaches based on the MReasoner and suggest to   ...
 % We evaluate the non-aggregated data provided by~\cite{khemlani:2016} and taking the clusters suggested in~\cite{declare:2017} as starting point. The non-aggregated data consists of two dataset for 20 participants, who carried out the same syllogistic reasoning task twice with a interval of one week.
 %  The evaluation shows that some but not all of the proposed clusters in~\cite{declare:2017} are well reflected in the individual reasoning patterns.
 % Interestingly, when comparing the changes of results of each individual participant
-% from the first to the second week, it seems that their answers in the second week fits better the classical logic derivations. 
+% from the first to the second week, it seems that their responses in the second week fits better the classical logic derivations. 
 % We formulate the hypothesis that the individual clusters do not represent different human reasoners, but different stages of reasoning. Depending on the persistence and the
 % previous training of the individual participant, ...
 
-Here, we focus on a qualitative assessment of the clustering approach proposed in~\cite{declare:2017},
-in the sense that we investigate the individual participants' conclusions with respect to the non-aggregated dataset provided by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
-In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach and the formal representation of cognitive principles within this approach. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach presented in~\cite{declare:2017} on non-aggregated data.
+Here, we provide a qualitative assessment of the \textit{clustering by principles} approach proposed in~\cite{declare:2017},
+that performed well on aggregated data, and investigate whether these clusters are also adequate with respect to the non-aggregated dataset given by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
+In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach, the cognitive principles and their formalization. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach presented in~\cite{declare:2017} on non-aggregated data.
 Section~\ref{sect:nonag} provides a more adequate characterization of the individuals' reasoning patterns.
 
-\section{Clustering by Principles under WCS} \label{sect:wcsclustering}
+\section{Clustering by Principles} \label{sect:wcsclustering}
 
-Clustering by principles under WCS was first presented in~\cite{declare:2017};
-the authors conjectured that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
-whereas heuristic strategies describe the methods that are applied when
-conclusions are not derived by reasoning but instead based on structural patterns or {biases}.
-This approach is an extension of the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches by Khemlani an Johnson-Laird~\cite{khemlani:2012}.
+Clustering by principles was first presented in~\cite{declare:2017}, which is an extension of
+the computational logic approach for human syllogistic reasoning presented in~\cite{cogsci:2017}.
+The authors in~\cite{declare:2017} conjectured that reasoning clusters can be expressed through cognitive principles and heuristic strategies. Cognitive principles are assumptions (not necessarily valid under CL) made by humans while reasoning, 
+whereas heuristic strategies describe the methods that are applied when conclusions are not derived by reasoning but instead based on structural patterns or {biases}: Three reasoning clusters and two heuristic strategies were specified, and achieved a match of 92\;\%, which was the highest result compared to the presented approaches by Khemlani an Johnson-Laird~\cite{khemlani:2012}.
 % The system developed in~\cite{declare:2017}, was extended and participated at the Syllogism Challenge 2017.\footnote{\url{https://www.cc.uni-freiburg.de/modelingchallenge/challenge-2017}} 
 Figure~\ref{overview:system:syllchal} illustrates the components of the system:
-First, groups of reasoners were specified based on a set of underlying cognitive principles and heuristic strategies.
-After that, this set was translated into a logic program (Section~\ref{sect:basic}-\ref{sect:advanced}), representing the group of reasoners.
+First, groups of reasoners were specified through sets of underlying cognitive principles and heuristic strategies.
+After that, these sets were translated into logic programs (Section~\ref{sect:basic}-\ref{sect:advanced}), representing the reasoning clusters.
 Next, the respective models were computed (Section~\ref{sect:wcs}-\ref{sect:lfp}).
-After that, the entailed relations between $a$ and $c$ were extracted (Section~\ref{sect:entail}). 
- The final answer distribution was specified according to the number of reasoning clusters 
+After that, for each cluster, the entailed relations between $a$ and $c$ were extracted (Section~\ref{sect:entail}). 
+ The final response distribution was specified according to the number of reasoning clusters 
 that entailed the conclusion.
 Finally, an illustrative representation of these clusters with respect to their distribution was done by means of multinomial process trees~\cite{Riefer1988}.
 
@@ -253,7 +252,7 @@ Finally, an illustrative representation of these clusters with respect to their 
 \node (A1) at (2,8.4) {};
 
 \node[anchor=west]  at (0,9.2) {\textbf{Cognitive Principles} presuppositions that humans make while reasoning};
-\node[anchor=west]  at (0,8.7) {\textbf{Heuristic Strategies} reasoning based on structure in patterns or biases};
+\node[anchor=west]  at (0,8.7) {\textbf{Heuristic Strategies} \hspace{0.05cm} reasoning based on structure in patterns or biases};
 
 \node (A2) at (2,7.9) {};
 \draw[thick, ->] (A1) to[m] node[right] {\tiny \gcolor{Description}} (A2);
@@ -299,13 +298,14 @@ by logic program clauses};
 
 
 \end{tikzpicture}
-\caption{The system that participated at the Syllogism Challenge 2017\label{overview:system:syllchal}.}
+\caption{The methodology of \textit{clustering by principles}\label{overview:system:syllchal}.}
 
 \end{figure}  
 
 The suggested computational logic approach for the formal representation and reasoning of these clusters,
 is the Weak Completion Semantics (WCS)~\cite{hk:2009a,hk:2009b}
-which has shown to model a wide range of human reasoning tasks~\cite{btg:2015:h}. 
+which has shown to model a wide range of human reasoning tasks~\cite{btg:2015:h}
+and will be introduced in the following.
 % WCS is the non-monotonic computational logic approach to consider
 % weakly completed logic programs, to compute their least models
 % under the three-valued {\L}ukasiewicz logic~\cite{lukasiewicz:20}, and to reason with respect to these models or search for explanations by means of (skeptical) abduction~\cite{kakas:etal:93}.
@@ -350,7 +350,7 @@ of~$\CalP$ or~$\WC\CalP$.
 % $\neg A$ is \textit{assumed in $\Ground \CalP$} iff $\Ground \CalP$
 % contains a negative assumption with head $A$, $\Ground \CalP$ does not
 % contain an unknown assumption with head $A$, and $\Def(A,\CalP) = \emptyset$.
-We omit the word \textit{contextual} when we refer to programs, if not stated otherwise.
+In the sequel, we omit the word \textit{contextual} when we refer to programs, if not stated otherwise.
 
 \subsection{Three-Valued {\L}ukasiewicz Logic Extended with $\cxt$} \label{sub:3valuedL}
 
@@ -366,10 +366,7 @@ Atoms which do not occur in~$I^\true \cup I^\bot$ are mapped to~$\udf$.
 The truth value of a given formula
 under $I$ is determined according to the truth tables in
 Table~\ref{tab:3vldluka}.
-\footnote{Thanks to the
- anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiwicz's necessity operator~\cite[p. 20]{malinowski:1993}, restricted to literals.
- }
- 
+
 $I(F) = \top$ denotes that a formula $F$ is mapped to true under $I$.
 A \defname{three-valued model} $\CalM$ of~$\CalP$ is a three-valued interpretation such that
 $\CalM(A \leftarrow \Body) = \true$ for each $A \leftarrow \Body \in \Ground\CalP$.
@@ -420,7 +417,7 @@ F & \neg F\\ \midrule
  \end{array}
 \;\
 \begin{array}{c|c}
- L & \cxt(L)\\
+ L & \cxt(L)\footnotemark\\
 \midrule
 \top & \top \\
 \bot & \bot  \\
@@ -430,6 +427,9 @@ F & \neg F\\ \midrule
 \caption{The truth tables for the connectives under the three-valued {\L}ukasiewicz logic and for $\cxt$. $L$ is a literal and $\top$, $\bot$, and $\udf$ denote \textit{true}, \textit{false},
 and \textit{unknown}, respectively.\label{tab:3vldluka}}
 \end{table}
+\footnotetext{Thanks to the
+ anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiwicz's necessity operator~\cite[p. 20]{malinowski:1993}, restricted to literals.
+ }
 
 A set of \textit{integrity constraints} $\CalIC$ consists of clauses of
 the form $\udf \leftarrow \Body$, where $\Body$ is a conjunction of
@@ -457,19 +457,19 @@ J^\bot & = & \{ A \mid \Def(A,\CalP) \neq \emptyset \mbox{ and }\\
 I^\top,I^\bot \rangle \mbox{ for all }  A \leftarrow \Body \in \Def(A,\CalP)\}.
 \end{array}\Shrink
 \]
-The weak completion of non-contextual programs\footnote{Non-contextual programs refer programs that do not contain rules in which $\cxt$ appears in the body of any rule, i.e.\ $p = 0$.} 
+The weak completion of non-contextual programs\footnote{Non-contextual programs are programs that do not contain rules in which $\cxt$ appears in the body of any rule, i.e.\ $p = 0$.} 
 always has a least model under  {\L}ukasiewicz logic,
-which can be computed by the least fixed point of~$\Svlp$~\cite{hk:2009a}. The correspondence to other well-known logic programming approaches, in particular 
-to the well-founded semantics has been shown in~\cite{dietz:hoelldobler:wernhard:2014}.
+which corresponds to the least fixed point of~$\Svlp$~\cite{hk:2009a}. 
+The interested reader is referred to~\cite{dietz:hoelldobler:wernhard:2014} for the correspondence to other 
+logic programming approaches.
  
-The weak completion of contextual
-programs might have more than one minimal model, and it is not guaranteed that 
-the least fixed point of $\Svlp$ always exists. However,
-for programs without cycles, there always exists a unique supported model,
+Different than for non-contextual programs, the weak completion of contextual
+programs might have more than one minimal model. Furthermore, if $\CalP$ is a contextual program, the least fixed point of $\Svlp$ might not even exist. However,
+for contextual programs without cycles, there always exists a unique supported model,
 which corresponds to the least fixed point of~$\Svlp$~\cite{dietz:hoelldobler:pereira:2017,dietz:hoelldobler:philipp:2017}. This model is \textit{supported} in the sense that 
-it will always be computed by $\Svlp$, independent from the interpretation we start to iterate $\Svlp$ with. Let us denote this model as $\CalM_\CalP$:
-% As the fixed point of $\Svlp$ is unique and only computes the supported minimal model of $\WComp\CalP$, 
-% we define 
+it will always be computed by $\Svlp$, independent from the interpretation we start to iterate $\Svlp$ with. Let us denote this model as $\CalM_\CalP$.
+As the fixed point of $\Svlp$ is unique and only computes the supported minimal model of $\WComp\CalP$, 
+we define 
 $\CalP \ModelsWCS F$ iff $\CalM_\CalP(F) = \top$.
 For all programs considered in the sequel, $\CalM_\CalP$ exists.
 
@@ -509,7 +509,7 @@ For all programs considered in the sequel, $\CalM_\CalP$ exists.
 
 Eight principles for quantified statements have been developed in~\cite{cogsci:2017,costa:dietz:Hoelldobler:2017,declare:2017}.
 In the following, the programs are
-specified using the predicates $y$ and $z$, where~$yz$ can be replaced by $ab$, $ba$, $cb$, or $bc$ and depend on the figures shown in Table~\ref{t:2}. First, we introduce the basic principles that are assumed for all premises when applicable.
+specified using the predicates $y$ and $z$, where~$yz$ can be replaced by $ab$, $ba$, $cb$, or $bc$ and depend on the figures in Table~\ref{t:2}. First, we introduce the basic principles that are assumed for all premises when applicable.
 In Section~\ref{sect:advanced}, we present the advanced principles, which will 
 later be used to distinguish between the clusters of reasoners.
 % We indicate the cognitive principles in the text by specifying them in brackets.
@@ -519,8 +519,8 @@ A complete specification of the logic programs with respect to the moods accordi
 
 \subsubsection{Conditional Representation (\conditionals) and License for Inference (\licenses)}\label{sect:condli}
 Consider \textit{All y are z} ({\MA yz}), which in CL, is represented as $\forall X (y(X) \rightarrow z(X))$.
-Similarly, we assume that humans also understand this statement as a conditional sentence (\conditionals).
-However, it seems that humans understand them defeasibly. According to Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}, they assume a \textit{license for the inference} and might allow exceptions to the conditional (\licenses). For \MA yz this can be 
+Similarly, we assume that humans also understand this statement as a conditional sentence (\conditionals),
+but also defeasible. According to Stenning and van Lambalgen~\cite{stenning:vanlambalgen:2008}, they assume a \textit{license for the inference} and might allow exceptions to the conditional (\licenses). For \MA yz this can be 
 explicitly expressed by 
 \textit{all $y$ that are not abnormal are $z$}.
 % \\
@@ -547,7 +547,7 @@ z(X) & \leftarrow  y(X) \wedge \neg \Ab_{yz}(X).
 \Ab_{yz}(X) & \leftarrow \cxt(z'(X)). \tag{\licenses}\\
 y(o) & \leftarrow \top. \tag{\import}
 \end{align}
-Note that $z'(X)$ appears within the $\cxt$ operator in the body of the second clause, where $z'$ represents the negation of $z$:\footnote{$z'(X)$ will be introduced by the \footnotesize{\textsf{transformation}} principle in Section~\ref{sect:dneg}.}
+Note that $z'(X)$ appears within the $\cxt$ operator in the body of the second clause, where $z'$ represents the negation of $z$ (which will be introduced by the \transformation\ principle in Section~\ref{sect:dneg}).
 Nothing is abnormal, unless the negation of $z$ is true.
 % , then $\Ab_{yz}(X)$ is false, for which then, given the first clause in $\CalP_{Ayx}$, $z(o)$ is true, if $y(o)$ is true. Note that, if $z'(X)$ would be written instead of $\cxt(z'(X))$, in the case where $\cxt(z'(o))$ is unknown, $z(o)$ could not be concluded, even if $y(o)$ would be true. This is due to the fact that negation in WCS is understood as strong negation.\footnote{This is different in other logic programming approaches, i.e.\ well-founded semantics.}
 % \end{align}
@@ -555,15 +555,15 @@ Nothing is abnormal, unless the negation of $z$ is true.
 We obtain \quad $\CalM_{\CalP_{Ayz}} = \langle \{y(o),z(o)\}, \{\Ab_{yz}(o)\} \rangle$.
 
 
-\subsubsection{Negation by Transformation (\transformation) and \\No Double Negation (\dnegation)} \label{sect:dneg}
+\subsubsection{Negation by Transformation (\transformation) and \\No Inference through Double Negation (\dnegation)} \label{sect:dneg}
 
 Consider the statement \textit{No y is z.} ({\ME yz}):
 Similarly to the previous case, \licenses\ and \import\ apply here
 as well.
 The logic programs specified in Subsection~\ref{sect:wcs} 
 do not allow heads of clauses to be negative literals. Therefore, a negative conclusion~$\neg p(X)$ is represented
-by introducing an auxiliary formula $p'(X)$ together with the clause $p(X) \leftarrow \neg p'(X)$ and the integrity constraint $\udf \leftarrow p(X) \wedge p'(X)$ (\transformation). This is a widely used technique in Logic Programming (e.g. choice rules in~\cite{GebserKaminskiKaufmannSchaub12}). 
-Another principle that we introduce is the \emph{no double negation} principle: Under the Weak Completion Semantics, a positive conclusion can be derived from double negation appearing in two conditionals. However, it seems that humans normally do not reason in such a way~\cite{khemlani:2012}. Hence, we block them with the help of abnormalities (\dnegation). $\CalP_{Eyz}$, the logic program representing \ME yz is as follows:
+by introducing an auxiliary formula $p'(X)$ together with the clause $p(X) \leftarrow \neg p'(X)$ and the integrity constraint $\udf \leftarrow p(X) \wedge p'(X)$ (\transformation). This is a widely used technique in Logic Programming (cf. choice rules in~\cite{GebserKaminskiKaufmannSchaub12}). 
+We also introduce the \emph{no inference through double negation} principle (\dnegation): Under the Weak Completion Semantics, a positive conclusion can be derived from two negations appearing in two conditionals. However, it seems that humans normally do not reason in such a way~\cite{khemlani:2012}. Hence, we block them with the help of abnormalities. $\CalP_{Eyz}$, the logic program representing \ME yz is as follows:
 % \footnote{For simplicity, we omitted to list the clauses that are introduced by the (\converse) principle in $\CalP_{Eyz}$: The same clauses just switching $y$ and $z$ are added and thus also the fact $z(o_2) \leftarrow \top$ for another object $o_2$.
 % The entire program can be found in~\cite{declare:2017}.}
 \begin{align}
@@ -584,12 +584,12 @@ z'(X)$. We obtain
 \subsubsection{Converse Implication (\converse) and \\ Unknown Generalization (\unknownGen)}
 Consider the statement \textit{Some y are z.} ({\MI yz}), which in CL, is represented as $\exists X (y(X) \wedge z(X))$
 and which is semantically equivalent to $\exists X(z(X) \wedge y(X))$ (\converse).
-As shown by Khemlani and Johnson-Laird~\cite{khemlani:2012}, humans seem to
-distinguish between \textit{some y are z} and \textit{all y are z} (\unknownGen).
+Another observation is that humans seem to
+distinguish between \textit{some y are z} and \textit{all y are z} (cf.~\cite{grice1975,khemlani:2012}).
 Accordingly, if we only observe that an object $o$ belongs to $y$ and $z$ then we do not want to conclude both, \textit{some y are z} and \textit{all y are z}.
-In order to distinguish between \textit{some y are z} and \textit{all y are z}, we introduce the following principle:  If we know that \textit{some y are z}, then there must not only be an object~$o_1$ which belongs to $y$ and $z$, but there must be another object $o_2$ which belongs to
+In order to distinguish between \textit{some y are z} and \textit{all y are z}, we introduce the \textit{unknown generalization} principle (\unknownGen):  If we know that \textit{some y are z}, then there must not only be an object~$o_1$ which belongs to $y$ and $z$, but there must be another object $o_2$ which belongs to
 $y$ and which does not belong to~$z$.
-$\CalP_{Iyz}$, the logic program representing \MI yz, is as follows:\footnote{For simplicity, here we omit the clauses introduced by ({\footnotesize\textsf{converse}}). They can be found in~\cite{declare:2017}.}
+$\CalP_{Iyz}$, the logic program representing \MI yz, is as follows:\footnote{We omit the clauses introduced by ({\footnotesize\textsf{converse}}), as they are symmetric. They can be found in~\cite{declare:2017}.}
 \begin{align}
 z(X) & \leftarrow y(X) \wedge \neg \Ab_{yz}(X). & \tag{\conditionals\ \&\ \licenses}\\
 \Ab_{yz}(o_1) & \leftarrow  \bot. & \tag{\unknownGen\ \& \ \licenses}\\
@@ -604,7 +604,7 @@ $\CalP_{Iyz}$ and,
 hence, $\CalM_{\CalP_{Iyz}}(z(o_2)) = \udf$.
 
 Consider the statement \textit{Some y are not z} ({\MO yz}), which in CL is represented as $\exists X (y(X) \wedge \neg z(X)$.
-As in the previous cases, \conditionals, \licenses, and \unknownGen are assumed.
+As in the previous cases, \conditionals, \licenses, and \unknownGen\ are assumed.
 As the conclusion is again a negation of a claim, \transformation\ and
 \dnegation\ apply as well. $\CalP_{Oyz}$, the logic program representing \MO yz is as follows:
 \begin{align}
@@ -617,21 +617,21 @@ y(o_2) & \leftarrow \top. & \tag{\unknownGen} \\
 \Ab_{nzz}(o_1)& \leftarrow \bot. & \tag{\licenses\ \&\ \dnegation}\\
 \Ab_{nzz}(o_2)& \leftarrow \bot. & \tag{\licenses\ \&\ \dnegation}
 \end{align}
-We have to add the integrity constraint $U \leftarrow z(X) \wedge
+We have to add the integrity constraint $\udf \leftarrow z(X) \wedge
 z'(X)$
 and obtain \[\CalM_{\CalP_{Oyz}} = \langle \{y(o_1), y(o_2), z'(o_1)\},\{\Ab_{ynz}(o_1),
 \Ab_{nzz}(o_1), \Ab_{nzz}(o_2), z(o_1) \} \rangle.\]
 
 
 \subsection{Advanced Principles}\label{sect:advanced}
-
-The principles introduced here are assumed not to be applied by all humans, 
-but characterize the reasoning clusters (c.f.\ Section~\ref{sect:aggregateddata}).
+Different than the basic principles, we assume that the principles introduced now, are not assumed to be applied by all humans.
+% % 
+% but characterize the reasoning clusters which will be discussed in Section~\ref{sect:aggregateddata}.
 
 
 \subsubsection{Contraposition (\contraposition)}
 
-In FOL, the conditional statement $\forall (X) (a(X) \rightarrow b(X))$, is logically
+In CL, the conditional statement $\forall (X) (a(X) \rightarrow b(X))$, is logically
 equivalent to its contrapositive, $\forall (X) (\neg b(X) \rightarrow \neg a(X))$.
 % This
 % contraposition also holds for the syllogistic moods~\MA\ and~\ME. 
@@ -663,7 +663,7 @@ y(X) & \leftarrow \neg y'(X) \wedge \neg \Ab_{nyy}(X). & \tag{\transformation\ \
 \subsubsection{Generalization (\negFailure)}  %\label{sect:naf}
 
 If all principles introduced so far are applied to a pair of existentially quantified premises
-(\MI or \MO), then the only object about which an inference can be made is the one
+(\MI\ or \MO), then the only object about which an inference can be made is the one
 resulting from \import\ with respect to the premise it introduced (i.e.\ only inferences about the properties 
 of the object about $a$ and $b$ or
 $b$ and $c$). 
@@ -675,8 +675,9 @@ There is, however, evidence that some humans still draw conclusions about $a$ an
 circumstances, i.e.\ they seem to generalize (universally quantify) the existential 
 premise with respect to other objects (\negFailure).
 Consider again $\CalP_{I yz}$ of Section~\ref{sect:basic}, where $\Ab_{yz}$ is only false for 
-$o_1$. In case \negFailure\ applies, then $\Ab_{yz}(o_1) \leftarrow \bot$
-in $\CalP_{I yz}$ is replaced by the following two clauses:
+$o_1$. In case \negFailure\ applies, then
+% $\Ab_{yz}(o_1) \leftarrow \bot$ in
+$\CalP_{I yz}$ is extended by the following two clauses:
 \begin{align}
 \Ab_{yz}(X) & \leftarrow \cxt(z'(X)). & \tag{\licenses\ \&\ \negFailure} \\
 \Ab_{yz}(o_2) & \leftarrow \udf. & \tag{\licenses\ \&\ \negFailure} 
@@ -697,18 +698,16 @@ Recall that programs are considered under their weak completion, i.e.\ if $\cxt(
 \subsubsection{Search for Alternative Conclusions (\abduction)}
 
 When participants are faced with \NVC\ (\textit{No valid conclusion}), they might not want to accept this conclusion and proceed to check whether there exists unknown information that might be relevant. This information may be explanations about
-facts introduced either from an existential import or from unknown generalization. 
-We use the first as source for observations, as they are used directly to infer new information  (\abduction). Consider the following pair of syllogistic premises: 
+facts introduced from either \import\ or \unknownGen. 
+We use the first as source for observations, as they are used directly to infer new information. Consider the following pair of syllogistic premises: 
 \begin{align}
  \emph{All artists are bakers. } & \emph{Some bakers are not chemists.} \tag{AO1} 
 \end{align}
 Under CL, \textit{No valid conclusion} follows. However, 62\;\% of the participants concluded \textit{Some artists are not chemists}.
 This conclusion can be modeled by abductive reasoning, where the system searches for explanations
-for a given observation. The second premise states that some bakers exist, i.e.\ the observation is $\CalO = \{b(o_2) \}$. $\CalO$ can be explained by the first premise, namely that
+for a given observation (\abduction). The second premise states that some bakers exist, i.e.\ the observation is $\CalO = \{b(o_2) \}$. $\CalO$ can be explained by the first premise, namely that
 this baker is an artist. Under WCS, this reasoning procedure was formalized by means of skeptical abduction.
-The interested reader is referred to~\cite{cogsci:2017} for 
-formal abductive approach for human syllogistic reasoning in this paper.
-
+The interested reader is referred to~\cite{cogsci:2017} for more details.
 
 
 \subsection{Entailment of Conclusions}\label{sect:entail}
@@ -747,11 +746,11 @@ By requiring for \MI yz (\MO yz, resp.) the existence of an object with the firs
 for which the second property $z$ has to be either either false or unknown (true or unknown, resp.),
 \MA yz and \MI yz, (\ME yz and \MO yz, resp.), exclude each other.
 
-\section{Evaluation} \label{sect:aggregateddata}
+\section{Evaluation} 
 
 
 
-\subsection{On aggregated Data}
+\subsection{On aggregated Data}\label{sect:aggregateddata}
 
 
 As illustration, let us consider \mbox{\MI\ME 2} from the introduction: 
@@ -768,13 +767,13 @@ The interested reader is referred to~\cite{declare:2017} for details on their ap
 The three reasoning clusters have been characterized by the following principles:\footnote{{\footnotesize\textsf{basic}} refers to the set of basic principles introduced in Subsection~\ref{sect:basic}.} (1) \basic, \converse\ for \MI, and \abduction,
     (2) \basic, \converse\ for \MI, and \negFailure, and
     (3) \basic, \converse\ for \MI\ and \ME, and \contraposition\ for~\MA.
-This approach achieved a match of 92\;\% with the aggregated data reported in~\cite{khemlani:2012}, and was the highest result compared to the presented approaches.
+This approach achieved a match of 92\;\% with the aggregated data reported in~\cite{khemlani:2012}, and was the highest result compared to the other approaches.
 
 Table~\ref{tab:cluster} summarizes the three clusters together with their conclusions for \MI\ME 2.
 \begin{table}
 \begin{center}
-\begin{tabular}{@{\hspace{0cm}}l@{\hspace{0.9cm}}c@{\hspace{0.9cm}}c@{\hspace{0.9cm}}cGG}
-Principle & (1) & (2) & (3) & Heuristic 1 & Heuristic 2 \medskip \\ \midrule  
+\begin{tabular}{@{\hspace{0cm}}l@{\hspace{0.4cm}}c@{\hspace{0.4cm}}c@{\hspace{0.9cm}}cGG}
+Principle & Cluster (1) & Cluster (2) & Cluster (3) & Heuristic 1 & Heuristic 2 \medskip \\ \midrule  
 \conditionals & $\checkmark$   & $\checkmark$ & $\checkmark$ & - & - \smallskip\\
 \licenses & $\checkmark$ & $\checkmark$       & $\checkmark$ & - & -   \smallskip \\
 \import  & $\checkmark$  & $\checkmark$       & $\checkmark$ & - & - \smallskip\\
@@ -794,7 +793,7 @@ Principle & (1) & (2) & (3) & Heuristic 1 & Heuristic 2 \medskip \\ \midrule
 \label{tab:cluster}}
 \end{center}
 \end{table}
-The corresponding logic program $\Pie$ that represents the basic cluster, consists of the following clauses:
+The corresponding logic program $\Pie$ for cluster (1) consists of the following clauses:
 \begin{align}
 a(X) & \leftarrow b(X) \wedge \neg \Ab_{ba}(X). & \tag{\conditionals\ \&\ \licenses}\\
 \Ab_{ba}(o_1) & \leftarrow  \bot. & \tag{\licenses\ \& \unknownGen}\\
@@ -822,7 +821,7 @@ I^\bot & = & \{ \Ab_{ba}(o_1), \Ab_{ab}(o_3), \Ab_{cnb}(o_5), \Ab_{nbb}(o_5), \A
 \end{array}
 \]
 for which according to the entailment of conclusions as defined in Section~\ref{sect:entail}, \textit{No valid conclusion}
-follows.
+follows.\footnote{For simplicity we ignore the application of {\footnotesize\textsf{searchAlt}}, which is described in more detail in~\cite{cogsci:2017}.}
 
 Applying the contraposition principle to \textit{No chemists are bakers} yields \textit{No bakers are chemists}.
 $\Piecontra$ consists of the following clauses:
@@ -862,7 +861,7 @@ I^{\bot''} & = & I^\bot & \cup & \{ a(o_5),  b(o5) \cup \{ \Ab_{ab}(o_i) \mid i 
 \end{array}
 \]
 \textit{No chemists are artists} is entailed by $\CalM_{\Piegen}$, because 
-for all objects which have the property $c$, (which only applies for $o_5$), they do not have the property.
+for all objects which have the property $c$, (which only applies for $o_5$), they do not have the property $a$.
 
 On aggregated data, the clusters performed fairly well with a match of 92\;\%. 
 We are interested whether these clusters also correspond to the reasoning patterns observed among individuals. 
@@ -870,16 +869,15 @@ For this purpose, we investigated the non-aggregated dataset provided by Johnson
 i.e.\ the participants carried out the task twice, with a break of one week. 
 The results are two-fold:
 \begin{description}
- \item[Aggregated evaluation] Most of the majority's answers can be explained by the clusters' predictions. In the first week 
+ \item[Aggregated evaluation] Most of the majority's responses can be explained by the clusters' predictions. In the first week 
  the majority's conclusion for 63 out of 64 pair of syllogistic premises and in the second week
- all majority's conclusions were predicted.
+ all majority's conclusions were predicted by the clustering by principles approach, i.e.\
+ by cluster (1), (2) or (3) as specified in Table~\ref{tab:cluster}.
 \item[Non-aggregated evaluation] None of the clusters fitted any individual participants' response pattern, i.e.\ none of the participants belonged to a certain cluster.
 \end{description}
 
-
-
-Given this sobering outcome with respect to the non-aggregated evaluation, 
-we ignored the clusters, and investigated whether parallels between the applied cognitive principles could be observed: \basic, \contraposition, \abduction\ and \negFailure.
+iven this sobering outcome with respect to the non-aggregated evaluation, 
+we decided to ignore the clusters, and investigated whether parallels between the following cognitive principles could be observed: \basic, \contraposition, \abduction\ and \negFailure.
 Table~\ref{tab:cogprinc} provides an overview of the predicted conclusions according to these principles.\footnote{Note that any advanced principle also includes the logic program clauses specified for \textsf{basic}.}
 The predictions of the principles naturally raises a few questions on the plausibility of 
 the underlying assumptions:
@@ -888,8 +886,21 @@ can their conclusions be
 explained by  the same principles throughout the whole reasoning task, or do they switch strategies within one reasoning task?
 (ii) Is the list of principles in Section~\ref{sect:representing} complete, i.e.\ can the conclusions of all reasoners be covered
  by these principles? and
-(iii) Do participants learn, i.e.\ do they improve their logical ability by doing the same reasoning task again?
+(iii) Do participants learn, i.e.\ do they improve their logical ability (with respect to CL) by doing the same reasoning task again?
 We address these questions in the following.
+
+
+\subsection{On non-aggregated Data} \label{sect:nonag}
+
+A wide amount of cognitive theories for syllogistic reasoning have previously only be evaluated with respect to the aggregated data of psychological experiments.
+Usually, as assessment, typical statistical evaluation criteria with respect to the experimental data 
+ have been used (cf. root-mean-square error, Bayesian information criterion~\cite{schwarz1978}, Akaike information criterion~\cite{akaike1974new}).
+ These measures are helpful as a general guideline, however, their major drawback is that they only compute the quantitative overall performance.
+ In this section, we carry out a qualitative assessment of the suggested cognitive principles with respect to the individual differences
+  among the participants.
+% As already mentioned in the introduction, an issue with these evaluations is that these theories cannot account for individual differences. 
+% Therefore, in this section, we will investigate an approach that accounts for non-aggregated data of participants in syllogistic reasoning. 
+
 
 \clearpage
 \begin{table}[t]\betweentinyandsmall\centering
@@ -994,41 +1005,30 @@ We address these questions in the following.
  
 \thispagestyle{empty}
 \clearpage
-\subsection{On non-aggregated Data} \label{sect:nonag}
-
-A wide amount of cognitive theories for syllogistic reasoning have previously only be evaluated with respect to the aggregated data of psychological experiments.
-Usually, as assessment, typical statistical evaluation criteria with respect to the experimental data 
- have been used (cf. root-mean-square error, Bayesian information criterion~\cite{schwarz1978}, Akaike information criterion~\cite{akaike1974new}).
- These measures are helpful as a general guideline, however, their major drawback is that they only compute the quantitative overall performance.
- In this section, we carry out a qualitative assessment of the suggested cognitive principles with respect to the individual differences
-  among the participants.
-% As already mentioned in the introduction, an issue with these evaluations is that these theories cannot account for individual differences. 
-% Therefore, in this section, we will investigate an approach that accounts for non-aggregated data of participants in syllogistic reasoning. 
-
 \subsubsection{mReasoner}
 
-Johnson-Laird and Khemlani~\cite{khemlani:2016} proposed an approach to model the individual reasoning patterns of the participants, and 
+Johnson-Laird and Khemlani~\cite{khemlani:2016} proposed an approach to model individual reasoning patterns of participants, and 
 showed that different participants seem to derive different conclusions.
 Their approach is built on top of the mReasoner~\cite{khemlani:2013}, an extension of the mental model theory, first introduced by Johnson-Laird~\cite{johnsonlaird:1983}.
-Reasoning depends on the construction and manipulation of mental models, based on 3 fundamental principles: 
-(i) represent possibilities, (ii) principle of iconicity, and (iii) principle of dual processes.
+The reasoning procedure depends on the construction and manipulation of mental models, based on 3 fundamental principles: 
+(i) mental models represent possibilities, (ii) mental models are iconic (principle of iconicity), and (iii) reasoning procedure consists of two interacting processes, intuition and deliberation (principle of dual processes).
  The procedure of mReasoner consists of two steps:
 (1) The construction of a small set of models that represents the terms of the premises, and
 (2) the call of a deliberative component to search for counterexamples to conclusions.
 Johnson-Laird and Khemlani specified four parameters for the construction of a mental model and evaluated their
 predictions based on 2 datasets, week 1 and week 2, for 20 participants.
-The parameters for the construction of the mental models are (i) the 
-size of a mental model, (ii) the probability of drawing conclusions only from the most common mental models, or from the complete set,
-(iii) the probability to search for counter examples,
-and (iv) the probability to weaken the conclusion.
-The clustering with mReasoner was based on a particular clustering algorithm to determine the optimal number of clusters for their dataset.
-The K-means clustering algorithm was used to divide participants into clusters and then
-the mReaoner to simulated the clusters by choosing appropriate parameter settings.
+The parameters for the construction of the mental models are (i) 
+size of a mental model, (ii) probability of drawing conclusions only from the most common mental models, or from complete set of models,
+(iii) probability to search for counter examples,
+and (iv) probability to weaken the conclusion.
+The clustering with mReasoner was based on a particular clustering algorithm to determine the optimal number of clusters for their dataset
+% The K-means clustering algorithm was used to divide participants into clusters
+and then
+the mReaoner simulated the clusters by choosing appropriate parameter settings.
 Johnson-Laird and Khemlani~\cite{khemlani:2016} identified three different reasoning clusters: The intuitive cluster, the intermediate cluster and the deliberative cluster.
-The approach is novel in the sense that until now no other cognitive theory tried to rigorously account for individual differences in human syllogistic reasoning. However, their approach seems to have two drawbacks. First, some of their 
-parameters were of probabilistic nature, i.e.\ there is no explaining factor behind them. Second, the authors did not distinguish between the participants' 
-responses in week 1 and week 2, but instead merged the responses. This might give a distorted picture, as participants could
-have learned from week 1 to week 2.
+The approach is novel as until now no other cognitive theory tried to rigorously account for individual differences in human syllogistic reasoning. However, their approach could be optimized in the sense that the authors did not distinguish between the participants' 
+responses in week 1 and week 2, but merged their responses. This might give a distorted picture, as participants could have learned from week 1 to week 2.
+We will address  this issue in the following.
 
 % The clusters described in~\cite{declare:2017} seem not to correspond exactly to the individual participants. 
 % and observed an interesting effect: Participants seemed to improve their logical ability when carrying out the task for the second time.
@@ -1039,10 +1039,6 @@ have learned from week 1 to week 2.
 % This dataset consists of the individual conclusions of 20 participants, who carried out the same 
 % task two times, with an interval of one week. 
 
-
-
-
- 
 
 \subsubsection{Individual Reasoning Patterns}
 
@@ -1144,64 +1140,68 @@ $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average
 \label{tab:individual}}
 \end{table}
 
-The non-aggregated data included a dataset of 20 participants,
-for which the task was carried out twice, with a break of one week~\cite{khemlani:2016}. On average, the basic principles explained the results about 10\;\% better than CL.
- Generally, the participants who were strong in CL/ contraposition, drew fewer conclusions according to abduction/ generalization, and vice versa.
- The changes within participant's answers from one to the other week was high, with 52/64 on average. 
- From week 1 to week 2, an increase with respect to CL (19/20, 6\;\%), basic (18/20, 6\;\%), contraposition (15/20, 5\;\%)
- and a decrease on generalization (15/20, 8\;\%) and no change on abduction (10/20, 0\;\%) answers could be observed.
+Taking the non-aggregated data from~\cite{khemlani:2016} as benchmark,
+we investigated how well their responses could be predicted through the cognitive principles,
+and whether the individual participants' responses would consistently correspond to a certain set of principles. Recall, their dataset consisted of responses from 20 participants, with each two entries,
+as the task was carried out twice, with a break of one week.
 
-Table~\ref{tab:individual} provides an overview of the performance of of each participant (column 2), for week 1 and week 2 (column 1)
+We observed the following patterns:
+On average, the basic principles explained the results about 10\;\% better than CL.
+ Generally, the participants who were strong in CL/ contraposition, drew fewer conclusions according to abduction/ generalization, and vice versa.
+ The changes within participant's responses from one to the other week was high, with 52/64 on average. 
+ From week 1 to week 2, an increase on conclusions corresponding to CL (19/20, 6\;\%), basic (18/20, 6\;\%), contraposition (15/20, 5\;\%)
+ and a decrease on conclusions corresponding to generalization (15/20, 8\;\%) and no change on
+ conclusions corresponding to abduction (10/20, 0\;\%) could be observed.
+
+Table~\ref{tab:individual} provides an overview of the performance  of each participant (column 2), for week 1 and week 2 (column 1)
 with respect to CL (column 4) and the cognitive principles (column 5, 6, 7, and 8).
 NVC (column 3) denotes how frequently participants responded \textit{no valid conclusion} and Changes (column 9) denotes how
-frequently participants changed their answers from week 1 to week 2. 
+frequently participants changed their responses from week 1 to week 2. 
 The symbols $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average, respectively.
 
-We identified three different clusters: 
+We identified three clusters, using the same labels as in~\cite{khemlani:2016}: 
 The last two columns show the classification of the participants as deliberative, intuitive or intermediate. 
 % The participants in the deliberative cluster here corresponds exactly to~\cite{khemlani:2016}. 
-Our classification only differs wrt.\ Johnson-Laird and Khemlani's 
+Our classification only differs with respect to Johnson-Laird and Khemlani's 
 classification~\cite{khemlani:2016} for the intermediate and intuitive cluster with respect to three participants (1, 11 and 19).
 A possible explanation for this difference could be that they
 did not take into account the participants' changes between week 1 and week 2.
 
 
-Two of the three clusters can be specified through a set of cognitive principles, and for one, no distinguishable pattern could be identified:
+Two of the three clusters can be specified through a set of cognitive principles, but for one
+group of participants, no distinguishable pattern could be identified:
 % The summary is shown in Table~\ref{tab:clusters}.
 \begin{description}
- \item[Deliberative cluster] (6 out of 20 participants) is characterized by the participants whose answers corresponded to the predictions made by basic/ contraposition. Almost none of their conclusions corresponded to predictions made by abduction/ generalization. Theses participants did change their answers from week 1 to week 2 
- lower than average and concluded higher than average NVC. Generally, their answers improved from week 1 to week 2 with respect to CL.
+ \item[Deliberative cluster] (6 out of 20 participants) is characterized by the participants whose responses corresponded to the predictions made by basic/ contraposition. Almost none of their conclusions corresponded to predictions made by abduction/ generalization. Theses participants did change their responses from week 1 to week 2 
+ lower than average and concluded higher than average NVC. Generally, their responses improved from week 1 to week 2 with respect to CL.
  \item[Intuitive cluster] (7 out of 20 participants)
-is characterized by the participants whose answers corresponded to the predictions given by abduction/ generalization. Almost none of their conclusions corresponded to the predictions made by contraposition (except of 2 participants in week 2). They showed a high change within their own answers from week 1 to week 2 
- and concluded lower than average NVC. Generally, their answers improved from week 1 to week 2 with respect to CL, but they never performed \textit{as well as} the participants in 
+is characterized by the participants whose responses corresponded to the predictions given by abduction/ generalization. Almost none of their conclusions corresponded to the predictions made by contraposition (except for 2 participants in week 2). They showed a high change within their own responses from week 1 to week 2 
+ and concluded lower than average NVC. Generally, their responses improved from week 1 to week~2 with respect to CL, but they never performed \textit{as well as} the participants in 
  the deliberative cluster.
- \item[Intermediate cluster] (7 out of 20 participants) is characterized by the participants whose answers did not corresponded to any particular principle. These participants had a high change within their own answers from week 1 to week 2
- and no particular pattern with respect to NVC conclusions. Generally they were not improving their answers from week 1 to week 2 with respect to CL, but normally compensated for answers valid in CL in some cases (that corresponded to contraposition) with answers not valid in CL in the other cases (that correspond to abduction/ generalization).
+ \item[Intermediate cluster] (7 out of 20 participants) is characterized by the participants whose responses did not corresponded to any particular set of principles. These participants had a high change within their own responses from week 1 to week~2
+ and no particular pattern with respect to NVC conclusions. Generally they were not improving their responses from week 1 to week 2 with respect to CL, but normally \textit{compensated} for responses valid in CL in some cases (that corresponded to contraposition) with responses not valid in CL in the other cases (that correspond to abduction/ generalization).
 \end{description}
 
  \section{Conclusions and Future Directions}
  
  
-We have investigated the cognitive adequacy of clustering by principles under WCS with respect to the individual answer patterns reported by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
+We have investigated the cognitive adequacy of clustering by principles with respect to the individual response patterns reported by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
 Their approach is the only one we are aware of that has evaluated predictions on human syllogistic reasoning
 with respect to the non-aggregated data.
-However in contrast to here, they did not distinguish between the participants' responses in week 1 and week 2.
- 
-Our results are two-fold: First, we were able to show that the reasoning clusters as specified in~\cite{declare:2017}, could not be validated
-with respect to these individual reasoning patterns. However, and this leads us to the second more interesting result,
-we could show that participants' answers seemed to be explainable through a set of cognitive principles. In particular,
-some principles seemed to exclude each other by the individual reasoners throughout the experiment (contraposition and abduction), whereas others often appeared together (basic/ contraposition and abduction/ generalization). 
-The individual participants' data allowed us to observe other reasoning patterns (high/ low frequency of NVC conclusions and high/ low frequency of changing answers between week 1 and week 2 answers). 
-Interestingly, there was one group of participants for which we could not identify any pattern (intermediate)
-and might have changed their strategies within the task.
-Furthermore, it is quite likely that the set of cognitive principles presented in Section~\ref{sect:representing} is not complete.
+Here, we additionally took into account the differences between the participants' responses in week 1 and week 2. 
+Our results are two-fold: First, the reasoning clusters as specified in~\cite{declare:2017}, could not be validated
+with respect to a dataset on individual reasoners. However, we could show that the response patterns of the individual participants corresponded to new sets of cognitive principles. In particular,
+some principles seemed to exclude each other throughout the experiment (contraposition and abduction), whereas others often appeared together (basic with contraposition and abduction with generalization).
+Additionally, the provided data allowed us to observe other patterns (high/ low frequency of NVC and high/ low frequency of changing responses between week 1 and week 2). 
+Interestingly, there was one group of participants for which we could not identify any pattern (intermediate). 
 
 % Static clusters for each participant might not be appropriate, rather, a sequential application of cognitive principles seems to be more likely
-For the future, we need to investigate whether the sequential application of the cognitive principles 
+For the future, we intend to investigate whether the sequential application of the cognitive principles 
 can give us more insights on the participants' reasoning pattern. In particular, our hypothesis is that these principles might correspond to some of the reasoning steps within the insight model
-by Johnson-Laird and Wason~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}. Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested by Ragni, Kola and Johnson-Laird~\cite{ragni:2017}.
-This in turn might give us a new starting point to investigate whether the cognitive principles  specified here can characterize participants' conclusions in other reasoning episodes.
-
+by Johnson-Laird and Wason~\cite{johnsonlaird:1970} for the selection task~\cite{wason:68}.
+Similarly, a meta-analysis of the individual response patterns for the selection task has been suggested by Ragni, Kola and Johnson-Laird~\cite{ragni:2017}.
+This in turn might give us a new starting point to investigate whether the cognitive principles  specified here can characterize participants' responses in other reasoning episodes.
+Furthermore, it is quite likely that the set of cognitive principles presented in Section~\ref{sect:representing} is not complete, and thus other principles will be identified in the future.
 
 % episodes.
 % In order to validate the idea of a sequential reasoning procedure, cognitive scientists will have to set-up new 
