@@ -90,7 +90,7 @@ Emmanuelle-Anna Dietz Saldanha and Richard M{\"o}rbitz\thanks{The authors are me
 % Therefore, an effortless interaction between humans and technical devices
 % is of crucial interest for everyone. As it is not likely that humans will make the effort to understand their devices but instead they will place high demands on them, their devices should be able to adapt to the human needs in the best possible way. For instance, a system should be able to recognize small changes and additionally identify which environmental parameters are relevant for the current communication with its owner. This in turn should allow the device to adapt flexibly and independently to the environment it is currently situated in. In order to develop such a system, it is necessary to understand how humans think and to recognize their behavioral patterns. 
 
-Even though the main logical formalism of Classical Logic (CL) has successfully been applied to our scientific reasoning, Kotarbi{\'n}ski~\cite{kotarbinski:1913} already stated in 1913, \textit{the need to revise the two-valued logic as it seemed to interfere with the freedom of human thinking}~\cite[p.17]{malinowski:1993}.
+Even though the main logical formalism of Classical Logic (CL) has successfully been applied to our scientific reasoning, Kotarbi{\'n}ski~\cite{kotarbinski:1913} already stated in 1913 \textit{the need to revise the two-valued logic as it seemed to interfere with the freedom of human thinking}~\cite[p.17]{malinowski:1993}.
 % Originally, one of the objectives in the field of AI and logic programming was to formalize human reasoning and commonsense reasoning~\cite{McCarthy59,McCarthy98}. 
 % However, the proposed approaches have been strongly critized~(cf.~\cite{mcdermott:87}).
 % On the other hand, cognitive scientists have extensively investigated and acquired a great expertise
@@ -103,7 +103,7 @@ Even though the main logical formalism of Classical Logic (CL) has successfully 
 In the last decades, cognitive scientists have repeatedly
 shown through experimental studies that human reasoning systematically deviates from conclusions that are valid under CL (cf.~\cite{wason:68,byrne:89}),
 and thus they seem to agree with Kotarbi{\'n}ski: Classical (two-valued) logic is not an adequate candidate for a cognitive theory.
- What should be the properties of such a candidate in the first place?
+ But what should be the properties of such a candidate in the first place?
 
 Cognitive theories that try to explain human reasoning need to be evaluated by their cognitive adequacy~\cite{strube:1992} and their performance should be compared to other theories.
 Conceptual cognitive adequacy describes to what extent a system corresponds to human conceptual knowledge, whereas inferential cognitive adequacy indicates whether the reasoning process of a system is structured similarly to the way humans reason~\cite{knauff:rauh:renz:1997}. 
@@ -213,7 +213,7 @@ among individuals, i.e.\ they only considered the data summed up with respect to
 As the above example and recent investigations on psychological experiments show (cf.~\cite{khemlani:2016, ragni:2017}), it seems that different humans represent and reason about conditionals differently.
 This implies that \textit{the} human reasoner does not exist, instead there 
 seem to exist various groups of reasoners, i.e.\ reasoning clusters. The identification of these differences and the specification of these clusters is central 
-for the development of an adequate cognitive theory. Only recently approaches have been proposed that account for individual differences (or clusters) in syllogistic reasoning (cf.~\cite{khemlani:2016,declare:2017}). 
+for the development of an adequate cognitive theory. Only recently approaches have been proposed that account for individual differences in syllogistic reasoning (cf.~\cite{khemlani:2016,declare:2017}). 
 
 
 %  The results show that some but not all of the proposed clusters are well reflected in the individual reasoning patterns.
@@ -232,9 +232,9 @@ for the development of an adequate cognitive theory. Only recently approaches ha
 % previous training of the individual participant, ...
 
 Here, we provide a qualitative assessment of the \textit{clustering by principles} approach proposed in~\cite{declare:2017},
-that performed well on aggregated data, and investigate whether these clusters are also adequate with respect to the non-aggregated dataset given by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
+that performed well on aggregated data, and investigate whether these clusters are also adequate with respect to the non-aggregated dataset provided by Johnson-Laird and Khemlani~\cite{khemlani:2016}.
 In Section~\ref{sect:wcsclustering} and~\ref{sect:representing}, we introduce the underlying computational logic approach, the cognitive principles and their formalization. Section~\ref{sect:aggregateddata} illustrates an example and briefly discusses the performance of the approach presented in~\cite{declare:2017} on non-aggregated data.
-Section~\ref{sect:nonag} provides a more adequate characterization of the individuals' reasoning patterns.
+Section~\ref{sect:nonag} provides novel characterization of the individuals' reasoning patterns through cognitive principles.
 
 \section{Clustering by Principles} \label{sect:wcsclustering}
 
@@ -434,7 +434,7 @@ F & \neg F\\ \midrule
 and \textit{unknown}, respectively.\label{tab:3vldluka}}
 \end{table}
 \footnotetext{Thanks to the
- anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiewicz necessity operator~\cite[p. 20]{malinowski:1993}, restricted to literals.
+ anonymous reviewer for the observation, that the $\cxt$ operator seems to be a special case of {\L}ukasiewicz necessity operator (cf.~\cite[p. 20]{malinowski:1993}), restricted to literals.
  }
 
 A set of \textit{integrity constraints} $\CalIC$ consists of clauses of
@@ -754,9 +754,7 @@ for which the second property $z$ has to be either either false or unknown (true
 
 \section{Evaluation} 
 
-
-
-\subsection{On aggregated Data}\label{sect:aggregateddata}
+\subsection{Clusters}\label{sect:aggregateddata}
 
 
 As illustration, let us consider \mbox{\MI\ME 2} from the introduction: 
@@ -896,7 +894,7 @@ explained by  the same principles throughout the whole reasoning task, or do the
 We address these questions in the following.
 
 
-\subsection{On non-aggregated Data} \label{sect:nonag}
+\subsection{Individual Reasoners} \label{sect:nonag}
 
 A wide amount of cognitive theories for syllogistic reasoning have previously only be evaluated with respect to the aggregated data of psychological experiments.
 Usually, as assessment, typical statistical evaluation criteria with respect to the experimental data 
@@ -1046,7 +1044,7 @@ We will address  this issue in the following.
 % task two times, with an interval of one week. 
 
 
-\subsubsection{Individual Reasoning Patterns}
+\subsubsection{Characterization through Principles}
 
 \begin{table}[htp]
 \betweentinyandsmall\centering
@@ -1146,9 +1144,9 @@ $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average
 \label{tab:individual}}
 \end{table}
 
-Taking the non-aggregated data from~\cite{khemlani:2016} as benchmark,
-we investigated how well their responses could be predicted through the cognitive principles,
-and whether the individual participants' responses would consistently correspond to a certain set of principles. Recall, their dataset consisted of responses from 20 participants, with each two entries,
+Taking the non-aggregated data from~\cite{khemlani:2016},
+we investigated how well the participants' responses could be explained through the cognitive principles,
+and whether their individual responses would be consistent with respect to a certain set of principles. Recall, Johnson-Laird and Khemlani's dataset consisted of responses from 20 participants, with each two entries,
 as the task was carried out twice, with a break of one week.
 
 We observed the following patterns:
@@ -1165,26 +1163,24 @@ NVC (column 3) denotes how frequently participants responded \textit{no valid co
 frequently participants changed their responses from week 1 to week 2. 
 The symbols $\uparrow$, $\downarrow$, and $\leftrightarrow$ denote above, below, and average, respectively.
 
-We identified three clusters, using the same labels as in~\cite{khemlani:2016}: 
+We identified three types of reasoners, characterizing them according to the terms already used in~\cite{khemlani:2016}: 
 The last two columns show the classification of the participants as deliberative, intuitive or intermediate. 
 % The participants in the deliberative cluster here corresponds exactly to~\cite{khemlani:2016}. 
 Our classification only differs with respect to Johnson-Laird and Khemlani's 
-classification~\cite{khemlani:2016} for the intermediate and intuitive cluster with respect to three participants (1, 11 and 19).
+classification~\cite{khemlani:2016} for the intermediate and intuitive reasoners with respect to three participants (1, 11 and 19).
 A possible explanation for this difference could be that they
 did not take into account the participants' changes between week 1 and week 2.
-
-
-Two of the three clusters can be specified through a set of cognitive principles, but for one
+Two of the three types of reasoners can be characterized through a set of cognitive principles, but for one
 group of participants, no distinguishable pattern could be identified:
 % The summary is shown in Table~\ref{tab:clusters}.
 \begin{description}
- \item[Deliberative cluster] (6 out of 20 participants) is characterized by the participants whose responses corresponded to the predictions made by basic/ contraposition. Almost none of their conclusions corresponded to predictions made by abduction/ generalization. Theses participants did change their responses from week 1 to week 2 
+ \item[Deliberative reasoners] (6 out of 20 participants) is characterized by the participants whose responses corresponded to the predictions made by basic/ contraposition. Almost none of their conclusions corresponded to predictions made by abduction/ generalization. Theses participants did change their responses from week 1 to week 2 
  lower than average and concluded higher than average NVC. Generally, their responses improved from week 1 to week 2 with respect to CL.
- \item[Intuitive cluster] (7 out of 20 participants)
+ \item[Intuitive reasoners] (7 out of 20 participants)
 is characterized by the participants whose responses corresponded to the predictions given by abduction/ generalization. Almost none of their conclusions corresponded to the predictions made by contraposition (except for 2 participants in week 2). They showed a high change within their own responses from week 1 to week 2 
  and concluded lower than average NVC. Generally, their responses improved from week 1 to week~2 with respect to CL, but they never performed \textit{as well as} the participants in 
  the deliberative cluster.
- \item[Intermediate cluster] (7 out of 20 participants) is characterized by the participants whose responses did not corresponded to any particular set of principles. These participants had a high change within their own responses from week 1 to week~2
+ \item[Intermediate reasoners] (7 out of 20 participants) is characterized by the participants whose responses did not corresponded to any particular set of principles. These participants had a high change within their own responses from week 1 to week~2
  and no particular pattern with respect to NVC conclusions. Generally they were not improving their responses from week 1 to week 2 with respect to CL, but normally \textit{compensated} for responses valid in CL in some cases (that corresponded to contraposition) with responses not valid in CL in the other cases (that correspond to abduction/ generalization).
 \end{description}
 
